@@ -1,0 +1,17 @@
+# Keep this repository focused on converted Markdown text.
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.json
+*.zip
+*.sqlite
+*.db
+
+auto/
+images/
+layout/
+middle_json/
+origin/
+spans/
