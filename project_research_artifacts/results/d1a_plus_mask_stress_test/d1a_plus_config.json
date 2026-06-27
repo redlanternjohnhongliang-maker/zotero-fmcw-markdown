@@ -1,0 +1,51 @@
+{
+  "subset_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "d1a_result_dir": "G:\\mineru_output\\results\\d1a_gao77_clean_sanity",
+  "mask_configs": [
+    {
+      "mask_name": "narrow",
+      "radius_scale": 0.5,
+      "min_radius": 1,
+      "max_radius": 6,
+      "guard_extra": 4
+    },
+    {
+      "mask_name": "default",
+      "radius_scale": 1.0,
+      "min_radius": 2,
+      "max_radius": 12,
+      "guard_extra": 4
+    },
+    {
+      "mask_name": "wide",
+      "radius_scale": 1.5,
+      "min_radius": 3,
+      "max_radius": 18,
+      "guard_extra": 4
+    }
+  ],
+  "guard_configs": [
+    2,
+    4,
+    6
+  ],
+  "valid_pfa_targets": [
+    0.01,
+    0.001
+  ],
+  "cfar_guard": 2,
+  "cfar_train": 10,
+  "valid_range_bins": [
+    2,
+    124
+  ],
+  "label_policy_path": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1\\manifest\\label_policy.json",
+  "strict_limits": {
+    "no_d1b": true,
+    "no_synthetic_interference": true,
+    "no_training": true,
+    "no_d2_d14": true,
+    "no_new_dataset": true,
+    "no_backbone": true
+  }
+}

@@ -1,0 +1,14 @@
+representation,can_calibrate_pfa_1e_2,measured_pfa_1e_2,can_calibrate_pfa_1e_3,measured_pfa_1e_3,stricter_pfa_5e_4,stricter_pfa_1e_4,feasibility_note,final_eligibility_label
+range_only,yes,0.010518884574655841,warn,0.0017649135192375574,,,limited: PFA 1e-3 exists; stricter not rerun for range in D5H,proxy-only
+corrected_RD,yes,0.009759187772005412,yes,0.0010138314714122538,"{'balanced_mild_weak_pd': '0.3225806451612903', 'weak_pd_delta': '-0.008064516129032251', 'measured_pfa_delta': '-2.18669460253125e-06'}","{'balanced_mild_weak_pd': '0.0', 'weak_pd_delta': '0.0', 'measured_pfa_delta': '-1.6820727711778862e-06'}",yes as calibration; stricter PFA was tested in D5E but did not rescue weak weighting,proxy-only
+corrected_RA,yes,0.01026779626346652,yes,0.0009852720578208101,,,yes as RA smoke; physically plausible best weak hit remains low,proxy-only
+RAD,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,insufficient-labels
+temporal_RD,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,insufficient-labels
+temporal_RA,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,insufficient-labels
+temporal_RAD,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,insufficient-labels
+STFT_spectrogram,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,proxy-only
+complex_IQ,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,proxy-only
+complex_RD,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,proxy-only
+raw_ADC,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,proxy-only
+raw_ADC_learnable_FFT,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,insufficient-labels
+radar_point_cloud,not_available,,not_available,,,,not executable as confirmed fixed-PFA object audit on Gao77,proxy-only

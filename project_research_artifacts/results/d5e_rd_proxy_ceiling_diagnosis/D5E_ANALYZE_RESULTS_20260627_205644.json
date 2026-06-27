@@ -1,0 +1,136 @@
+{
+  "date": "2026-06-27T20:56:44.517042",
+  "skill": "/analyze-results",
+  "input_dir": "G:\\mineru_output\\results\\d5e_rd_proxy_ceiling_diagnosis",
+  "csv_inventory": [
+    {
+      "file": "d5e_ceiling_effect_audit.csv",
+      "row_count": 3,
+      "column_count": 35,
+      "columns_preview": "balanced_mild_false_alarm_count, balanced_mild_measured_pfa, balanced_mild_mid_miss_count, balanced_mild_mid_pd, balanced_mild_overall_miss_count, balanced_mild_overall_pd, balanced_mild_strong_miss_count, balanced_mild_strong_pd"
+    },
+    {
+      "file": "d5e_interference_manifest.csv",
+      "row_count": 576,
+      "column_count": 8,
+      "columns_preview": "achieved_sir_db, frame_id, frame_idx, interference_params_json, num_interferers, sir_name, source_sequence, target_sir_db"
+    },
+    {
+      "file": "d5e_pfa_sensitivity.csv",
+      "row_count": 15,
+      "column_count": 26,
+      "columns_preview": "balanced_mild_false_alarm_count, balanced_mild_measured_pfa, balanced_mild_mid_pd, balanced_mild_overall_pd, balanced_mild_strong_pd, balanced_mild_weak_hits, balanced_mild_weak_pd, false_alarm_count_delta"
+    },
+    {
+      "file": "d5e_rd_mask_width_sensitivity.csv",
+      "row_count": 36,
+      "column_count": 31,
+      "columns_preview": "background_cell_count, balanced_mild_false_alarm_count, balanced_mild_measured_pfa, balanced_mild_mid_pd, balanced_mild_overall_pd, balanced_mild_saturated, balanced_mild_strong_pd, balanced_mild_weak_hits"
+    },
+    {
+      "file": "d5e_rd_proxy_label_dependence.csv",
+      "row_count": 18,
+      "column_count": 29,
+      "columns_preview": "balanced_mild_false_alarm_count, balanced_mild_measured_pfa, balanced_mild_mid_pd, balanced_mild_overall_pd, balanced_mild_strong_pd, balanced_mild_weak_hits, balanced_mild_weak_pd, doppler_box_mode"
+    },
+    {
+      "file": "d5e_reconstruction_metrics.csv",
+      "row_count": 10,
+      "column_count": 7,
+      "columns_preview": "input_type, magmse_db_to_clean, method, mse_db_to_clean, mse_power_to_clean, seed, sir_name"
+    },
+    {
+      "file": "d5e_sample_size_stability.csv",
+      "row_count": 6,
+      "column_count": 23,
+      "columns_preview": "balanced_mild_weak_pd, balanced_mild_weak_pd_ci_high, balanced_mild_weak_pd_ci_low, five_hit_pd_delta, hit_delta_confidence, one_hit_pd_delta, plus_0_hits_meaningful, plus_1_hit_meets_pd_bar_0p02"
+    },
+    {
+      "file": "d5e_training_loss.csv",
+      "row_count": 52,
+      "column_count": 20,
+      "columns_preview": "background_det_term, detection_term, epoch, grad_norm_before_clip, lambda_rec, lr, magmse_term, method"
+    },
+    {
+      "file": "d5e_training_summary.csv",
+      "row_count": 4,
+      "column_count": 34,
+      "columns_preview": "final_train_background_det, final_train_detection, final_train_loss, final_train_magmse, final_train_target_det, final_val_background_det, final_val_detection, final_val_loss"
+    },
+    {
+      "file": "d5e_weak_threshold_difficulty.csv",
+      "row_count": 12,
+      "column_count": 32,
+      "columns_preview": "balanced_mild_false_alarm_count, balanced_mild_measured_pfa, balanced_mild_mid_pd, balanced_mild_overall_pd, balanced_mild_strong_pd, balanced_mild_weak_hits, balanced_mild_weak_pd, false_alarm_count_delta"
+    }
+  ],
+  "config_decision": {
+    "date": "2026-06-27T20:54:11.910610",
+    "stage": "D5E",
+    "verdict": "NO-GO",
+    "claim_supported": "no",
+    "integrity_status": "pending_audit",
+    "confidence": "medium",
+    "ceiling_effect_present": true,
+    "q30_too_easy": true,
+    "strict_pfa_supports_weak_weighting": false,
+    "mask_deformation_supports_weak_weighting": false,
+    "harder_q_supports_weak_weighting": false,
+    "rd_proxy_label_overly_optimistic": true,
+    "weak_n_too_small_for_strong_claim": true,
+    "d6_allowed": false,
+    "continue_weak_weighting": false,
+    "recommended_next": "Do not enter D6. Record D5D/D5E as limited negative RD-proxy evidence; only continue after fixing RD proxy/task difficulty."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "observation": "At PFA=1e-2, balanced_mild weak Pd is 1.0000 with 0.0 missed weak targets.",
+      "interpretation": "The D5D default RD proxy has a hard ceiling: the baseline already hits every q30 weak target.",
+      "implication": "D5D cannot demonstrate a weak-weighting improvement at the main PFA because there is no remaining weak-hit room."
+    },
+    {
+      "id": "F2",
+      "observation": "At PFA=1e-3, mean weak Pd delta is -0.0161 and mean weak hit delta is -1.0.",
+      "interpretation": "When the threshold becomes stricter, weak weighting does not become better; it is slightly worse on average.",
+      "implication": "Stricter fixed-PFA settings do not rescue weak weighting."
+    },
+    {
+      "id": "F3",
+      "observation": "Across 12 range/doppler mask combinations, no mean row has positive weak Pd and weak-hit delta together.",
+      "interpretation": "Mask-width perturbation does not reveal a hidden weak-weighting advantage.",
+      "implication": "The NO-GO is robust to the tested mask deformations."
+    },
+    {
+      "id": "F4",
+      "observation": "q10/q20/q30/q40 weak subsets all have balanced_mild weak Pd = 1.0; q30 test weak_n is 62 and mean RD contrast is 32.42 dB.",
+      "interpretation": "The q30 range-only weak threshold still selects RD targets that are easy under the current RD proxy.",
+      "implication": "The weak definition is not hard enough for RD weak-preservation claims."
+    },
+    {
+      "id": "F5",
+      "observation": "Clean/interfered peak proxy boxes both saturate; local-window overlap vs clean boxes is 0.9194, vertical-stripe area is 2492.4 cells.",
+      "interpretation": "The proxy label design is optimistic/saturated. The issue is not only the clean-RD peak source; broad or alternative proxy boxes still make weak hits easy.",
+      "implication": "D5E remains a mixed-proxy diagnosis, not confirmed RD performance."
+    },
+    {
+      "id": "F6",
+      "observation": "test weak_n is 62 at q30; one hit equals 0.0161 Pd, two hits equal 0.0323 Pd, and the pre-registered +5 hit bar equals 0.0806 Pd.",
+      "interpretation": "Small hit-count changes can look nontrivial in Pd, but +0/+1/+2 hits are not enough for a robust claim.",
+      "implication": "All claims must stay conservative, especially with only 2 seeds."
+    }
+  ],
+  "verdict": {
+    "verdict": "NO-GO",
+    "ceiling_effect_present": true,
+    "q30_too_easy": true,
+    "strict_pfa_supports_weak_weighting": false,
+    "mask_deformation_supports_weak_weighting": false,
+    "harder_q_supports_weak_weighting": false,
+    "rd_proxy_label_overly_optimistic": true,
+    "weak_n_too_small_for_strong_claim": true,
+    "continue_weak_weighting": false,
+    "d6_allowed": false,
+    "recommended_route": "Stop weak weighting for now; do not enter D6. If continuing, first repair RD proxy/task difficulty."
+  }
+}

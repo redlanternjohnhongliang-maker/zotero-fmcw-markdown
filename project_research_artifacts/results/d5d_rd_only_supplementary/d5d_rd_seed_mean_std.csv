@@ -1,0 +1,9 @@
+﻿max,mean,metric,min,n_seeds,std
+1.0,1.0,balanced_mild_weak_pd,1.0,2,0.0
+1.0,1.0,weak_weighting_weak_pd,1.0,2,0.0
+0.0,0.0,weak_pd_delta,0.0,2,0.0
+0.0,0.0,weak_hit_delta,0.0,2,0.0
+-8.746778410125e-06,-1.3961204000777043e-05,measured_pfa_delta,-1.9175629591429086e-05,2,7.374311390285456e-06
+-26.0,-41.5,false_alarm_count_delta,-57.0,2,21.920310216782973
+0.0,-0.016129032258064502,pfa_1e3_weak_pd_delta,-0.032258064516129004,2,0.022809896167307966
+0.0,0.0,non_overlap_only_weak_pd_delta,0.0,2,0.0

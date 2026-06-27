@@ -1,0 +1,5 @@
+﻿angle_axis_max_deg,angle_axis_min_deg,angle_bin_count,axis_name,bin0_angle_deg,center_angle_deg,center_bin,expected_monotonic_for_shifted_plot,is_monotonic_increasing,last_bin_angle_deg,max_abs_step_deg,mean_bin_step_deg,unit,uses_fftshift
+90.0,-90.0,64,d5c_current_linear_shifted_sin_axis,-90.0,0.9094950120051731,32,True,True,90.0,14.475648419681946,2.857142857142857,degree,True
+75.63848843708344,-90.0,64,exact_fftshift_fftfreq_half_lambda_axis,-90.0,0.0,32,True,True,75.63848843708344,14.361511562916562,2.6291823561441814,degree,True
+75.63848843708344,-90.0,64,unshifted_fftfreq_half_lambda_axis,0.0,-90.0,32,False,False,-1.7907846593289494,165.63848843708342,5.229939558965681,degree,False
+90.0,-90.0,64,reversed_d5c_current_linear_shifted_sin_axis,90.0,-0.9094950120051795,32,False,False,-90.0,14.475648419681946,2.857142857142858,degree,True

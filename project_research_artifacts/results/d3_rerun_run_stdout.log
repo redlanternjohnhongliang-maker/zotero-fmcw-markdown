@@ -1,0 +1,9 @@
+{
+  "d3_rerun_pass": true,
+  "best_lambda_rec": 0.5,
+  "next_step": "可以进入 D4，但 D4 仍只应做 tuned balanced BCE / focal loss 强 baseline，不能直接进入 weak-target full loss。",
+  "result_dir": "G:\\mineru_output\\results\\d3_rerun_gao77_baseline_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d3_rerun_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D3_RERUN_GAO77_BASELINE_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D3_RERUN_GAO77_BASELINE_SANITY_REPORT_20260626_221805.md"
+}

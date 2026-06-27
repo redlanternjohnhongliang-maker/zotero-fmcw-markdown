@@ -1,0 +1,14 @@
+representation,baseline_weak_pd_or_projection_hit_at_pfa_1e_2,weak_n,baseline_weak_hits,improvement_room_weak_hits,saturation_risk,note,final_eligibility_label
+range_only,0.3511450381679389,262,92,170,not_saturated,not_saturated_as_score_but_known_negative_baseline,proxy-only
+corrected_RD,1.0,62,62,0,severe,"severe: balanced_mild weak Pd=1.0000, improvement_room=0",proxy-only
+corrected_RA,0.030534351145038167,262,8,254,not_saturated,low saturation risk; primary issue is calibration/weak hit,proxy-only
+RAD,,0,,,unknown,not estimable without required labels,insufficient-labels
+temporal_RD,,0,,,unknown,not estimable without required labels,insufficient-labels
+temporal_RA,,0,,,unknown,not estimable without required labels,insufficient-labels
+temporal_RAD,,0,,,unknown,not estimable without required labels,insufficient-labels
+STFT_spectrogram,,0,,,unknown,not estimable without required labels,proxy-only
+complex_IQ,,0,,,unknown,not estimable without required labels,proxy-only
+complex_RD,,0,,,unknown,not estimable without required labels,proxy-only
+raw_ADC,,0,,,unknown,not estimable without required labels,proxy-only
+raw_ADC_learnable_FFT,,0,,,unknown,not estimable without required labels,insufficient-labels
+radar_point_cloud,,0,,,unknown,not estimable without required labels,proxy-only

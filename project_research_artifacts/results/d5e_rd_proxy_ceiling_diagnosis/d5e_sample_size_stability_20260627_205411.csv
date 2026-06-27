@@ -1,0 +1,7 @@
+﻿balanced_mild_weak_pd,balanced_mild_weak_pd_ci_high,balanced_mild_weak_pd_ci_low,five_hit_pd_delta,hit_delta_confidence,one_hit_pd_delta,plus_0_hits_meaningful,plus_1_hit_meets_pd_bar_0p02,plus_2_hits_meets_hit_bar_5,plus_5_hits_required_for_d5d_bar,seed,target_pfa,two_hit_pd_delta,weak_hit_delta,weak_n,weak_n_small_for_claim,weak_pd_delta,weak_pd_delta_ci_high,weak_pd_delta_ci_low,weak_pd_delta_seed_std,weak_weighting_weak_pd,weak_weighting_weak_pd_ci_high,weak_weighting_weak_pd_ci_low
+1.0,1.0,1.0,0.08064516129032258,no_positive_gain,0.016129032258064516,False,False,False,True,42,0.01,0.03225806451612903,0,62,True,0.0,0.0,0.0,,1.0,1.0,1.0
+1.0,1.0,1.0,0.08064516129032258,no_positive_gain,0.016129032258064516,False,False,False,True,200,0.01,0.03225806451612903,0,62,True,0.0,0.0,0.0,,1.0,1.0,1.0
+,,,,two_seed_only,,,,,,seed_sensitivity,0.01,,,,,0.0,,,0.0,,,
+0.5967741935483871,0.7096774193548387,0.4838709677419355,0.08064516129032258,no_positive_gain,0.016129032258064516,False,False,False,True,42,0.001,0.03225806451612903,0,62,True,0.0,0.0,0.0,,0.5967741935483871,0.7258064516129032,0.4838709677419355
+0.6129032258064516,0.7258064516129032,0.4995967741935484,0.08064516129032258,no_positive_gain,0.016129032258064516,False,False,False,True,200,0.001,0.03225806451612903,-2,62,True,-0.03225806451612903,0.0,-0.08064516129032258,,0.5806451612903226,0.6935483870967742,0.46733870967741936
+,,,,two_seed_only,,,,,,seed_sensitivity,0.001,,,,,-0.016129032258064516,,,0.022809896167307983,,,

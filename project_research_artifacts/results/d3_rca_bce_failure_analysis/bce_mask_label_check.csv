@@ -1,0 +1,3 @@
+﻿background_bce_mean_val,background_cell_count_train,background_label_value,bce_valid_cell_count_val,guard_ring_ignored,ignored_guard_cell_count_train,label_or_broadcast_bug_detected,mask_name,overall_bce_mean_val,target_background_bce_contribution_ratio_val,target_background_overlap_count_train,target_background_ratio_train,target_bce_mean_val,target_cell_count_train,target_label_value
+0.052874621003866196,23016,0,13994,True,5056,False,narrow,0.49696484208106995,10.118226874677477,0,0.2040319777546055,2.924685478210449,4696,1
+0.04920601844787598,20974,0,14164,True,4704,False,default,0.7755846381187439,19.28095965093461,0,0.3380375703251645,3.309164047241211,7090,1

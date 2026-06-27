@@ -1,0 +1,2 @@
+﻿background_abs_residual_mean_db,background_suppressed_or_shaped,case,diagnosis,guard_abs_residual_mean_db,residual_abs_mean_db,residual_concentrated_in_target,residual_mean_db,residual_std_db,target_abs_residual_mean_db
+3.9161510122460115,False,reference_bce_model_clean,ordinary BCE learns detection-shaping rather than signal restoration,6.220072539883278,4.2720853505389345,True,0.6654745832447374,5.332756014904066,4.281164412265677

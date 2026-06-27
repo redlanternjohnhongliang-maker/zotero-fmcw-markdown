@@ -1,0 +1,2 @@
+﻿final_loss,has_nan_or_inf,initial_loss,input_mse_db,loss_drop_fraction,output_max_db,output_min_db,output_mse_db,output_std_db,sample_count,stage,steps
+0.0014116814127191901,False,0.3036828339099884,5.708576157776797,0.9953514612777302,75.25573022791923,40.023659248009835,0.026536533496231952,5.334065228240525,16,tiny_batch,300

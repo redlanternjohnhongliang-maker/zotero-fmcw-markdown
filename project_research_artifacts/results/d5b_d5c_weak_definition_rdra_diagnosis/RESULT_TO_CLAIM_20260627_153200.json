@@ -1,0 +1,46 @@
+﻿{
+    "date":  "2026-06-27",
+    "reviewer":  "independent-codex-subagent-xhigh",
+    "claim_supported":  "partial",
+    "integrity_status":  "warn",
+    "confidence":  "medium",
+    "final_route":  "conditional supplementary experiment",
+    "what_results_support":  "The results support recording range-only weak weighting as weak or negative evidence, and support a narrow RD feasibility confirmation. They do not support continued range-only weak weighting as a main path.",
+    "what_results_dont_support":  "They do not support a claim that repaired weak definitions make weak weighting stable. They also do not support confirmed RD/RA improvement, RA readiness, or D6 entry.",
+    "missing_evidence":  [
+                             "multi-seed repaired-definition runs with frozen/train-only weak thresholds",
+                             "robust default/narrow and all/non-overlap gains",
+                             "PFA 1e-3 support",
+                             "independent RD/RA labels or stronger projection audit",
+                             "fixed-PFA RD training smoke"
+                         ],
+    "suggested_claim_revision":  "Under repaired weak-target definitions, range-only weak-target weighting does not show stable preservation gains. RD projection smoke suggests possible separability advantages and warrants a narrow representation follow-up; RA remains inconclusive. D6 is not permitted.",
+    "next_experiments_needed":  "Run one constrained RD-only supplementary experiment: fixed-PFA, same detector protocol, no D6, no false-alarm penalty yet, multi-seed if feasible. Re-run result-to-claim afterward.",
+    "claim_questions":  [
+                            {
+                                "claim":  "repaired weak definition gives stable weak-target gain",
+                                "evidence":  "best repaired row clean_peak_overlap_aware weak Pd delta 0.0182, hit delta +4; zero repaired rows clear bars",
+                                "verdict":  "no",
+                                "id":  "C1"
+                            },
+                            {
+                                "claim":  "range-only weak weighting negative result",
+                                "evidence":  "only bar-clearing row is unrepaired and overlap-contaminated; prior D5 +1 hit and 3-seed mean gain -0.0076",
+                                "verdict":  "yes",
+                                "id":  "C2"
+                            },
+                            {
+                                "claim":  "RD/RA next-stage follow-up",
+                                "evidence":  "RD feasibility-smoke yes; RA inconclusive",
+                                "verdict":  "partial",
+                                "id":  "C3"
+                            },
+                            {
+                                "claim":  "D6 remains forbidden",
+                                "evidence":  "no stable repaired gain; no formal 3-seed confirmation; proxy/smoke-only; audit warn",
+                                "verdict":  "yes",
+                                "id":  "C4"
+                            }
+                        ],
+    "trace_path":  "G:\\mineru_output\\.aris\\traces\\result-to-claim\\2026-06-27_run01"
+}

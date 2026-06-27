@@ -1,0 +1,43 @@
+{
+  "stage": "D5D",
+  "date": "2026-06-27T16:36:45.585804",
+  "device": "cuda",
+  "representation": "RD-only",
+  "seeds": [
+    42,
+    200
+  ],
+  "train_sir_names": [
+    "light",
+    "medium"
+  ],
+  "eval_sir_name": "medium",
+  "n_train_frames": 96,
+  "n_val_frames": 96,
+  "n_test_frames": 96,
+  "batch_size": 2,
+  "tiny_steps": 35,
+  "small_epochs": 5,
+  "lr": 0.0003,
+  "lambda_rec": 0.5,
+  "weak_weight": 2.0,
+  "split_definition": "frozen_clean_peak_overlap_aware",
+  "target_pfas": [
+    0.01,
+    0.001
+  ],
+  "constraints": {
+    "entered_d6": false,
+    "false_alarm_penalty": false,
+    "clean_identity_full_method": false,
+    "proposed_full_loss": false,
+    "detector_modified": false,
+    "fixed_pfa_protocol_modified": false,
+    "large_model": false,
+    "ra_mainline": false,
+    "threshold_leakage": false
+  },
+  "projection_caveat": "Doppler center is projected from the clean RD peak inside the range-label interval; no Doppler GT is available.",
+  "result_dir": "G:\\mineru_output\\results\\d5d_rd_only_supplementary",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5d_rd_only_figures"
+}

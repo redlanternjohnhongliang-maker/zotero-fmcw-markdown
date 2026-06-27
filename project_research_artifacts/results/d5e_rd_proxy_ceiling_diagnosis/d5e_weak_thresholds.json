@@ -1,0 +1,33 @@
+{
+  "split_definition": "frozen_clean_peak_overlap_aware",
+  "threshold_source": "train split only",
+  "train_target_peak_db_q30_weak_threshold": 50.59374745245401,
+  "train_target_peak_db_q70_strong_threshold": 57.92325790895632,
+  "train_target_count_for_threshold": 226,
+  "weak_candidate_count_all_frames": 462,
+  "overlap_filtered_weak_candidate_count_all_frames": 58,
+  "threshold_leakage": false,
+  "used_test_clean_map_property_for_threshold": false,
+  "repair_rule": "clean_peak <= train q30, then remove stronger-overlap/range-bin-conflict/nearest<2-bin weak candidates to mid",
+  "counts": {
+    "train": {
+      "weak_n": 56,
+      "mid_n": 102,
+      "strong_n": 68
+    },
+    "val": {
+      "weak_n": 64,
+      "mid_n": 91,
+      "strong_n": 80,
+      "target_n": 235
+    },
+    "test": {
+      "weak_n": 62,
+      "mid_n": 86,
+      "strong_n": 87,
+      "target_n": 235
+    }
+  },
+  "dataset": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "diagnostic_stage": "D5E"
+}

@@ -1,0 +1,145 @@
+{
+  "sequence": "2019_04_09_cms1000",
+  "files": [
+    {
+      "mat_file": "000002.mat",
+      "label_file": "0000000002.csv",
+      "adc_shape": [
+        128,
+        255,
+        4,
+        2
+      ],
+      "virtual_array_shape": [
+        128,
+        255,
+        8
+      ],
+      "range_profile_shape": [
+        128
+      ],
+      "rd_map_shape": [
+        128,
+        255
+      ],
+      "label_count": 1,
+      "figures": [
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\range_profile_000002.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\rd_map_000002.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\label_projection_range_only_000002.png"
+      ]
+    },
+    {
+      "mat_file": "000226.mat",
+      "label_file": "0000000226.csv",
+      "adc_shape": [
+        128,
+        255,
+        4,
+        2
+      ],
+      "virtual_array_shape": [
+        128,
+        255,
+        8
+      ],
+      "range_profile_shape": [
+        128
+      ],
+      "rd_map_shape": [
+        128,
+        255
+      ],
+      "label_count": 1,
+      "figures": [
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\range_profile_000226.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\rd_map_000226.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\label_projection_range_only_000226.png"
+      ]
+    },
+    {
+      "mat_file": "000450.mat",
+      "label_file": "0000000450.csv",
+      "adc_shape": [
+        128,
+        255,
+        4,
+        2
+      ],
+      "virtual_array_shape": [
+        128,
+        255,
+        8
+      ],
+      "range_profile_shape": [
+        128
+      ],
+      "rd_map_shape": [
+        128,
+        255
+      ],
+      "label_count": 1,
+      "figures": [
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\range_profile_000450.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\rd_map_000450.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\label_projection_range_only_000450.png"
+      ]
+    },
+    {
+      "mat_file": "000674.mat",
+      "label_file": "0000000674.csv",
+      "adc_shape": [
+        128,
+        255,
+        4,
+        2
+      ],
+      "virtual_array_shape": [
+        128,
+        255,
+        8
+      ],
+      "range_profile_shape": [
+        128
+      ],
+      "rd_map_shape": [
+        128,
+        255
+      ],
+      "label_count": 1,
+      "figures": [
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\range_profile_000674.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\rd_map_000674.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\label_projection_range_only_000674.png"
+      ]
+    },
+    {
+      "mat_file": "000897.mat",
+      "label_file": "0000000897.csv",
+      "adc_shape": [
+        128,
+        255,
+        4,
+        2
+      ],
+      "virtual_array_shape": [
+        128,
+        255,
+        8
+      ],
+      "range_profile_shape": [
+        128
+      ],
+      "rd_map_shape": [
+        128,
+        255
+      ],
+      "label_count": 1,
+      "figures": [
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\range_profile_000897.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\rd_map_000897.png",
+        "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\figures\\label_projection_range_only_000897.png"
+      ]
+    }
+  ]
+}

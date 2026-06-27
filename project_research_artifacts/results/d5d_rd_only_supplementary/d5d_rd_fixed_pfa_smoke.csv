@@ -1,0 +1,5 @@
+﻿calibration_threshold,false_alarm_count,input_type,measured_pfa,overall_pd,scope_note,sir_name,target_background_contrast_db,target_pfa,test_background_cell_count,validation_background_cell_count,weak_pd,weak_separability_proxy_db
+74.03356719970702,29187,clean,0.009818931594473786,1.0,RD fixed-PFA smoke with range labels and clean-RD Doppler peak projection.,,38.600710783613486,0.01,2972523,2969203,1.0,32.41742890880954
+94.16251751708982,3129,clean,0.0010526411402031204,0.8893617021276595,RD fixed-PFA smoke with range labels and clean-RD Doppler peak projection.,,38.600710783613486,0.001,2972523,2969203,0.6129032258064516,32.41742890880954
+77.93912216186523,29047,interfered_medium,0.009771833556880804,1.0,RD fixed-PFA smoke with range labels and clean-RD Doppler peak projection.,medium,38.600710783613486,0.01,2972523,2969203,1.0,32.41742890880954
+94.9423672637939,3084,interfered_medium,0.0010375024852625194,0.8553191489361702,RD fixed-PFA smoke with range labels and clean-RD Doppler peak projection.,medium,38.600710783613486,0.001,2972523,2969203,0.5483870967741935,32.41742890880954

@@ -1,0 +1,26 @@
+{
+  "zip_path": "G:\\mineru_output\\gao_77ghz_raw_adc\\Automotive.zip",
+  "result_dir": "G:\\mineru_output\\results\\d0b_gao77_subset_selection",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d0b_figures",
+  "subset_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "random_seed": 20260626,
+  "top_k": 5,
+  "radar_sample_per_sequence": 30,
+  "target_total_frames": 1500,
+  "per_sequence_quota": 300,
+  "final_sequences": [
+    "2019_05_09_mlms003",
+    "2019_05_09_bm1s007",
+    "2019_04_30_mlms001",
+    "2019_05_09_cm1s003",
+    "2019_04_30_mlms000"
+  ],
+  "strict_limits": {
+    "no_training": true,
+    "no_d1_d14": true,
+    "no_synthetic_interference": true,
+    "no_cfar": true,
+    "no_fixed_pfa": true,
+    "no_full_images_extract": true
+  }
+}

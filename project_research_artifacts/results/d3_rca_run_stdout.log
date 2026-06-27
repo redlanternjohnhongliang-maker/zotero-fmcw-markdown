@@ -1,0 +1,11 @@
+{
+  "d3_rca_done": true,
+  "numeric_domain_bug": false,
+  "mask_label_bug": false,
+  "pure_bce_detection_shaping": true,
+  "best_anchor_lambda": 1.0,
+  "result_dir": "G:\\mineru_output\\results\\d3_rca_bce_failure_analysis",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d3_rca_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D3_RCA_BCE_FAILURE_ANALYSIS_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D3_RCA_BCE_FAILURE_ANALYSIS_REPORT_20260626_215907.md"
+}

@@ -1,0 +1,64 @@
+﻿# D5B-D5C weak definition / RD-RA diagnosis
+
+生成时间：2026-06-27 15:14:08
+
+阶段：D5B-D5C。没有进入 D6，没有加入 false alarm penalty，没有修改 detector 或 CFAR 主评价协议，没有引入新大模型或 3 seeds 正式实验。
+
+## 1. 执行边界
+
+- 主 baseline：`balanced_mild`。
+- weak weighting：仅最小 sanity，沿用 `weak_peak_w2p0`。
+- 数据：`G:\mineru_output\gao_77ghz_raw_adc\subset_d1a_v1`。
+- 训练样本：600 synthetic-interference samples；非正式 3-seed 实验。
+- D5C：只做 clean-map RD/RA projection smoke，不声称 RD/RA target mask 是精确真值。
+
+## 2. D5B weak definition audit
+
+| definition | weak_n | weak_overlap_mask_ratio | weak_non_overlap_count | jaccard_with_clean_peak_percentile | range_bin_conflict_ratio | interval_overlap_ratio | average_nearest_target_distance_bins |
+|---|---|---|---|---|---|---|---|
+| clean_peak_percentile | 1851 | 0.4965 | 932 | 1.0000 | 0.0605 | 0.4965 | 17.7616 |
+| clean_peak_non_overlap | 932 | 0.0000 | 932 | 0.5035 | 0.0000 | 0.0000 | 26.2511 |
+| clean_peak_overlap_aware | 1120 | 0.1679 | 932 | 0.6051 | 0.0000 | 0.1679 | 23.1814 |
+| isolated_target_only | 932 | 0.0000 | 932 | 0.5035 | 0.0000 | 0.0000 | 26.2511 |
+| peak_to_local_background_ratio | 1851 | 0.6213 | 701 | 0.6601 | 0.0448 | 0.6213 | 15.2032 |
+| range_bin_unique_distance | 1580 | 0.4101 | 932 | 0.8536 | 0.0000 | 0.4101 | 20.7762 |
+
+## 3. D5B repaired definition results
+
+| definition | weak_n | balanced_mild_weak_pd | weak_weighting_weak_pd | weak_pd_delta | weak_hit_delta | measured_pfa | false_alarm_count_delta | clean_input_no_harm | default_vs_narrow_mask_consistency | all_vs_non_overlap_consistency |
+|---|---|---|---|---|---|---|---|---|---|---|
+| clean_peak_percentile | 1851 | 0.3588 | 0.3855 | 0.0267 | 7 | 0.0104 | -3 | True | True | True |
+| clean_peak_non_overlap | 932 | 0.3545 | 0.3704 | 0.0159 | 3 | 0.0106 | -1 | True | True | True |
+| clean_peak_overlap_aware | 1120 | 0.3682 | 0.3864 | 0.0182 | 4 | 0.0103 | -5 | True | True | True |
+| isolated_target_only | 932 | 0.3545 | 0.3704 | 0.0159 | 3 | 0.0107 | 0 | True | True | True |
+| peak_to_local_background_ratio | 1851 | 0.2797 | 0.2966 | 0.0169 | 4 | 0.0105 | -2 | True | True | True |
+| range_bin_unique_distance | 1580 | 0.3498 | 0.3539 | 0.0041 | 1 | 0.0107 | 1 | True | False | True |
+
+Best weak-Pd delta row: `clean_peak_percentile` with weak Pd delta = 0.0267, hit delta = 7. This remains a small-sample sanity result, not a confirmed improvement.
+
+## 4. D5C RD/RA feasibility smoke
+
+| representation | target_projection_hit_rate | weak_target_projection_hit_rate | target_overlap_ratio | weak_target_overlap_ratio | weak_separability_proxy_db | fixed_pfa_calibration_sanity | measured_pfa_at_target_pfa_1e_2 | measured_pfa_at_target_pfa_1e_3 | supports_followup_rdra_training |
+|---|---|---|---|---|---|---|---|---|---|
+| range_only | 0.5556 | 0.3511 | 0.4755 | 0.2786 | 5.9355 | pass | 0.0105 | 0.0018 | smoke_only_no |
+| RD | 1.0000 | 1.0000 | 0.3824 | 0.1947 | 30.8049 | pass | 0.0098 | 0.0010 | feasibility_smoke_yes |
+| RA | 0.1189 | 0.0305 | 0.2171 | 0.0649 | 9.0275 | pass | 0.0103 | 0.0010 | feasibility_smoke_inconclusive |
+
+RD/RA interpretation is limited to feasibility evidence. RD has no Doppler ground-truth label in this subset; RA uses rough label azimuth projection.
+
+## 5. Decision summary
+
+| decision_item | verdict | evidence | route |
+|---|---|---|---|
+| continue_weak_weighting | NO-GO | best_definition=clean_peak_percentile, weak_pd_delta=0.0267, weak_hit_delta=7 | conditional_switch_to_rdra_smoke_followup |
+| switch_to_rdra | CONDITIONAL-SMOKE | RD: sep_gain=24.87, overlap_drop=0.084; RA: sep_gain=3.09, overlap_drop=0.214 | conditional_switch_to_rdra_smoke_followup |
+| enter_D6 | NO-GO | D5B-D5C is restricted to definition repair and RD/RA feasibility; no false alarm penalty tested. | conditional_switch_to_rdra_smoke_followup |
+
+## 6. Output paths
+
+- Result dir: `G:\mineru_output\results\d5b_d5c_weak_definition_rdra_diagnosis`
+- Figure dir: `G:\mineru_output\gao_77ghz_raw_adc\reports\d5b_d5c_figures`
+- Key CSV:
+  - `d5b_weak_definition_audit.csv`
+  - `d5b_repaired_definition_results.csv`
+  - `d5c_range_rd_ra_separability.csv`

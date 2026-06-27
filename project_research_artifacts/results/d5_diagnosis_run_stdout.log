@@ -1,0 +1,8 @@
+{
+  "recommend_d6": false,
+  "main_diagnosis": "训练样本量可能是瓶颈之一，但仍需确认 non-overlap、narrow 与 PFA=1e-3 是否同步支持。",
+  "result_dir": "G:\\mineru_output\\results\\d5_diagnosis_weak_weighting_failure",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5_diagnosis_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D5_DIAGNOSIS_WEAK_WEIGHTING_FAILURE_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D5_DIAGNOSIS_WEAK_WEIGHTING_FAILURE_REPORT_20260627_135855.md"
+}

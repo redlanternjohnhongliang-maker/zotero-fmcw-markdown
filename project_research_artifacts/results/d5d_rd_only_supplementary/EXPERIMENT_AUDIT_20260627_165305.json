@@ -1,0 +1,61 @@
+{
+  "date": "2026-06-27",
+  "auditor": "codex-subagent-xhigh",
+  "overall_verdict": "WARN",
+  "integrity_status": "warn",
+  "trace_path": "G:\\mineru_output\\.aris\\traces\\experiment-audit\\2026-06-27_run02",
+  "checks": {
+    "ground_truth_provenance": {
+      "status": "WARN",
+      "details": "Dataset range/object labels are used, but RD Doppler boxes are proxy-derived from clean RD peak projection inside the labeled range interval. This is explicitly labeled as supplementary/proxy; no model outputs are used as GT."
+    },
+    "weak_threshold_leakage": {
+      "status": "PASS",
+      "details": "Weak/mid/strong thresholds are computed from train-frame clean_peak values only; leakage flags are false."
+    },
+    "fixed_pfa_protocol": {
+      "status": "PASS",
+      "details": "Calibration thresholds use validation background cells; test PFA uses test background cells."
+    },
+    "baseline_and_constraints": {
+      "status": "PASS",
+      "details": "Main baseline is balanced_mild; weak_weight=2.0, lambda_rec=0.5; no D6, false-alarm penalty, full loss, larger model, detector modification, or RA mainline."
+    },
+    "score_normalization": {
+      "status": "PASS",
+      "details": "No metric division by model-output max/min was found. Raw PFA/FA/hit/Pd values are saved."
+    },
+    "result_existence_consistency": {
+      "status": "PASS",
+      "details": "Required CSV/JSON/MD files and six figures exist; reported numbers match CSV/JSON to rounding."
+    },
+    "scope_claim_strength": {
+      "status": "WARN",
+      "details": "Scope is 2 seeds, 96/96/96 frames, RD-only, medium-SIR, synthetic interference, and proxy RD boxes. Claims must remain limited."
+    },
+    "eval_type": "mixed_proxy"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "D5D ran an end-to-end RD-only fixed-PFA supplementary sanity experiment.",
+      "impact": "supported"
+    },
+    {
+      "id": "C2",
+      "claim": "RD weak weighting improves weak-target preservation.",
+      "impact": "unsupported"
+    },
+    {
+      "id": "C3",
+      "claim": "D6 can proceed.",
+      "impact": "unsupported"
+    }
+  ],
+  "action_items": [
+    "Keep D5D claims limited to RD-only supplementary proxy sanity.",
+    "Do not enter D6 from these results.",
+    "Require true Doppler/velocity GT or a stronger pre-registered RD localization protocol before real RD-performance claims."
+  ],
+  "numeric_mismatches_found": []
+}

@@ -1,0 +1,14 @@
+representation,proxy_source,leakage_risk,proxy_optimism_risk,mitigation,claim_ceiling
+range_only,range projection + train-only weak threshold,low_to_medium,range collapse/overlap hides targets,report baseline only; no positive claim,proxy-only
+corrected_RD,clean/interfered RD Doppler peak projection,high,clean peak boxes and saturated baseline are over-optimistic,never write confirmed RD performance,proxy-only
+corrected_RA,px/py to azimuth projection,medium,axis/sign/mask width can inflate/deflate hits,cap at calibration audit until physical mapping is resolved,proxy-only
+RAD,constructed 3D boxes if attempted,high,invented boxes can encode clean peaks,do not construct performance labels from Gao77,insufficient-labels
+temporal_RD,sequence continuity + RD proxy,high,future-frame/clean-frame association can leak,no temporal claim without track IDs,insufficient-labels
+temporal_RA,sequence continuity + RA proxy,high,inherits RA and tracking leakage,defer until RA and tracks pass,insufficient-labels
+temporal_RAD,constructed RAD tracks,high,combines missing labels and temporal leakage,external dataset/protocol reference only,insufficient-labels
+STFT_spectrogram,range/frequency projection from spatial labels,medium,signal separability may not map to object hits,use as signal diagnostic only,proxy-only
+complex_IQ,projected object labels on raw complex samples,medium,phase no-harm can be underdefined,availability and deterministic no-harm only,proxy-only
+complex_RD,complex RD with same Doppler proxy,high,phase may be useful but labels remain proxy,cap at proxy-only,proxy-only
+raw_ADC,downstream deterministic projection,medium,raw domain has no direct object mask,memory/feasibility only,proxy-only
+raw_ADC_learnable_FFT,learned spectral transform,not_allowed,would require training,exclude from D5H,insufficient-labels
+radar_point_cloud,CFAR-derived sparse points,medium,sub-threshold weak targets may be discarded,auxiliary only,proxy-only

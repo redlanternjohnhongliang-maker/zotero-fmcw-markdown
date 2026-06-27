@@ -1,0 +1,9 @@
+{
+  "d1b_pass": false,
+  "result_dir": "G:\\mineru_output\\results\\d1b_gao77_synthetic_interference_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d1b_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D1B_GAO77_SYNTHETIC_INTERFERENCE_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D1B_GAO77_SYNTHETIC_INTERFERENCE_SANITY_REPORT_20260626_172209.md",
+  "rows_protocol_a": 64,
+  "rows_protocol_b": 64
+}

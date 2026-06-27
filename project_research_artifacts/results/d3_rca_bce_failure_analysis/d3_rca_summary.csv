@@ -1,0 +1,5 @@
+﻿check,evidence,result
+numeric_domain_bug,"inputs, targets, and inverse-transformed outputs are all compared in dB; normalized tensors are inverse-transformed before evaluation",not_detected
+mask_label_bug,"target label=1, background label=0, guard ignored, target/background overlap count is zero in BCE masks",not_detected
+diff_cfar_all_zero_or_one,see diff_cfar_stability_check.csv,not_detected
+ordinary_bce_detection_shaping,"reference clean MSE=28.8811, output MSE=44.7549, weak Pd=0.6324",detected

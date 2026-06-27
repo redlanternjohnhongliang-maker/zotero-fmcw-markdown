@@ -1,0 +1,44 @@
+{
+  "stage": "D3-RCA",
+  "strict_limits": {
+    "not_d4": true,
+    "no_focal_loss": true,
+    "no_balanced_bce": true,
+    "no_weak_target_full_loss": true,
+    "no_false_alarm_penalty": true,
+    "no_3_seeds": true,
+    "no_rdlr_diffirm_rimformer": true
+  },
+  "train_frames": 128,
+  "train_samples": 256,
+  "val_frames": 64,
+  "test_frames": 64,
+  "device": "cuda",
+  "normalization": {
+    "mean_db": 46.446006774902344,
+    "std_db": 4.327477931976318
+  },
+  "reference_lr": 0.0008,
+  "reference_temperature": 0.7,
+  "temperature_values": [
+    0.5,
+    0.7,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "lr_values": [
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05
+  ],
+  "lambda_rec_values": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    1.0
+  ]
+}

@@ -1,0 +1,9 @@
+﻿class_group,hit_count,pd,target_count,target_pfa
+cyclist_like,447,0.7364085667215815,607,0.01
+motorbike_like,0,,0,0.01
+pedestrian_like,349,0.653558052434457,534,0.01
+vehicle_like,1114,0.8869426751592356,1256,0.01
+cyclist_like,392,0.6457990115321252,607,0.001
+motorbike_like,0,,0,0.001
+pedestrian_like,283,0.5299625468164794,534,0.001
+vehicle_like,848,0.6751592356687898,1256,0.001

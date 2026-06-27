@@ -1,0 +1,4 @@
+﻿decision_item,evidence,route,verdict
+continue_weak_weighting,"best_definition=clean_peak_percentile, weak_pd_delta=0.0267, weak_hit_delta=7",conditional_switch_to_rdra_smoke_followup,NO-GO
+switch_to_rdra,"RD: sep_gain=24.87, overlap_drop=0.084; RA: sep_gain=3.09, overlap_drop=0.214",conditional_switch_to_rdra_smoke_followup,CONDITIONAL-SMOKE
+enter_D6,D5B-D5C is restricted to definition repair and RD/RA feasibility; no false alarm penalty tested.,conditional_switch_to_rdra_smoke_followup,NO-GO

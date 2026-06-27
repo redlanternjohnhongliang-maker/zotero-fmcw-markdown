@@ -1,0 +1,72 @@
+{
+  "stage": "D4",
+  "strict_limits": {
+    "only_d4": true,
+    "no_d5_d14": true,
+    "no_weak_target_weighted_loss": true,
+    "no_false_alarm_penalty": true,
+    "no_clean_identity_full_method": true,
+    "no_proposed_full_loss": true,
+    "no_3_seeds": true,
+    "no_rdlr_diffirm_rimformer": true,
+    "no_large_model": true
+  },
+  "model": "SimpleRangeFCN",
+  "reused_d3_rerun_anchors": [
+    "mse",
+    "bce_rec_anchor_lambda_0.5"
+  ],
+  "train_frames": 300,
+  "train_samples": 600,
+  "val_frames": 160,
+  "val_samples": 320,
+  "test_frames": 160,
+  "batch_size": 4,
+  "tiny_steps": 120,
+  "small_epochs": 8,
+  "bce_lr": 0.0003,
+  "bce_temperature": 1.0,
+  "lambda_rec": 0.5,
+  "configs": [
+    {
+      "label": "balanced_mild",
+      "family": "balanced",
+      "balance": "mild"
+    },
+    {
+      "label": "balanced_full",
+      "family": "balanced",
+      "balance": "full_inverse_frequency"
+    },
+    {
+      "label": "focal_g1_a0p25",
+      "family": "focal",
+      "gamma": 1.0,
+      "alpha": 0.25
+    },
+    {
+      "label": "focal_g1_a0p5",
+      "family": "focal",
+      "gamma": 1.0,
+      "alpha": 0.5
+    },
+    {
+      "label": "focal_g2_a0p25",
+      "family": "focal",
+      "gamma": 2.0,
+      "alpha": 0.25
+    },
+    {
+      "label": "focal_g2_a0p5",
+      "family": "focal",
+      "gamma": 2.0,
+      "alpha": 0.5
+    }
+  ],
+  "best_strong_baseline": "balanced_mild",
+  "normalization": {
+    "mean_db": 47.59535598754883,
+    "std_db": 4.9765400886535645
+  },
+  "device": "cuda"
+}

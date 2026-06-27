@@ -1,0 +1,35 @@
+{
+  "stage": "D5-check",
+  "strict_limits": {
+    "no_d6": true,
+    "no_false_alarm_penalty": true,
+    "no_clean_identity_full_method": true,
+    "no_proposed_full_loss": true,
+    "only_balanced_mild_and_weak_peak_w2p0": true,
+    "no_large_model": true,
+    "no_rdlr_diffirm_rimformer": true
+  },
+  "model": "SimpleRangeFCN",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "primary_protocol": {
+    "sir": "medium",
+    "mask": "default",
+    "scope": "all",
+    "pfa": 0.01,
+    "split_definition": "clean_peak_percentile"
+  },
+  "train_frames": 300,
+  "val_frames": 160,
+  "test_frames": 160,
+  "batch_size": 4,
+  "tiny_steps": 120,
+  "small_epochs": 8,
+  "bce_lr": 0.0003,
+  "bce_temperature": 1.0,
+  "lambda_rec": 0.5,
+  "device": "cuda"
+}

@@ -1,0 +1,58 @@
+{
+  "stage": "D5B-D5C",
+  "date": "2026-06-27T15:14:04.936154",
+  "python_device": "cuda",
+  "train_sample_count": 600,
+  "weak_weight": 2.0,
+  "primary_pfa": 0.01,
+  "secondary_pfa": 0.001,
+  "definitions": [
+    {
+      "key": "clean_peak_percentile",
+      "short": "orig_peak",
+      "display": "clean_peak_percentile original"
+    },
+    {
+      "key": "clean_peak_non_overlap",
+      "short": "peak_non_overlap",
+      "display": "clean_peak_percentile + non-overlap-only"
+    },
+    {
+      "key": "clean_peak_overlap_aware",
+      "short": "peak_overlap_aware",
+      "display": "clean_peak_percentile + overlap-aware filtering"
+    },
+    {
+      "key": "isolated_target_only",
+      "short": "isolated_only",
+      "display": "isolated-target-only weak definition"
+    },
+    {
+      "key": "peak_to_local_background_ratio",
+      "short": "local_ratio",
+      "display": "peak-to-local-background ratio"
+    },
+    {
+      "key": "range_bin_unique_distance",
+      "short": "range_unique",
+      "display": "range-bin uniqueness / nearest-target-distance filtering"
+    }
+  ],
+  "constraints": {
+    "entered_d6": false,
+    "false_alarm_penalty": false,
+    "detector_modified": false,
+    "cfar_protocol_modified": false,
+    "three_seed_formal_experiment": false,
+    "large_model": false
+  },
+  "input_paths": {
+    "dataset": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+    "d5_diagnosis": "G:\\mineru_output\\results\\d5_diagnosis_weak_weighting_failure",
+    "d5_check": "G:\\mineru_output\\results\\d5_check_improvement_significance"
+  },
+  "output_paths": {
+    "result_dir": "G:\\mineru_output\\results\\d5b_d5c_weak_definition_rdra_diagnosis",
+    "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5b_d5c_figures"
+  }
+}

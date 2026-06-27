@@ -1,0 +1,77 @@
+{
+  "stage": "D5E",
+  "date": "2026-06-27T20:54:11.913610",
+  "device": "cuda",
+  "representation": "RD-only proxy diagnosis",
+  "seeds": [
+    42,
+    200
+  ],
+  "train_sir_names": [
+    "light",
+    "medium"
+  ],
+  "eval_sir_name": "medium",
+  "n_train_frames": 96,
+  "n_val_frames": 96,
+  "n_test_frames": 96,
+  "pfa_levels": [
+    0.01,
+    0.005,
+    0.001,
+    0.0005,
+    0.0001
+  ],
+  "mask_range_names": [
+    "narrow",
+    "default",
+    "wide"
+  ],
+  "doppler_radii": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "weak_q_levels": [
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "weak_weight": 2.0,
+  "lambda_rec": 0.5,
+  "split_definition": "frozen_clean_peak_overlap_aware",
+  "constraints": {
+    "entered_d6": false,
+    "false_alarm_penalty": false,
+    "clean_identity_full_method": false,
+    "proposed_full_loss": false,
+    "detector_modified": false,
+    "fixed_pfa_protocol_modified": false,
+    "large_model": false,
+    "rd_proxy_written_as_confirmed_performance": false
+  },
+  "evaluation_type": "mixed_proxy",
+  "projection_caveat": "RD Doppler boxes are diagnostic proxies derived from range labels; no Doppler GT is available.",
+  "decision": {
+    "date": "2026-06-27T20:54:11.910610",
+    "stage": "D5E",
+    "verdict": "NO-GO",
+    "claim_supported": "no",
+    "integrity_status": "pending_audit",
+    "confidence": "medium",
+    "ceiling_effect_present": true,
+    "q30_too_easy": true,
+    "strict_pfa_supports_weak_weighting": false,
+    "mask_deformation_supports_weak_weighting": false,
+    "harder_q_supports_weak_weighting": false,
+    "rd_proxy_label_overly_optimistic": true,
+    "weak_n_too_small_for_strong_claim": true,
+    "d6_allowed": false,
+    "continue_weak_weighting": false,
+    "recommended_next": "Do not enter D6. Record D5D/D5E as limited negative RD-proxy evidence; only continue after fixing RD proxy/task difficulty."
+  },
+  "result_dir": "G:\\mineru_output\\results\\d5e_rd_proxy_ceiling_diagnosis",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5e_rd_proxy_ceiling_figures"
+}

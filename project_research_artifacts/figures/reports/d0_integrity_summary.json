@@ -1,0 +1,155 @@
+{
+  "sequence": "2019_04_09_cms1000",
+  "subset_root": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset\\Automotive\\2019_04_09_cms1000",
+  "radar_count": 896,
+  "label_count": 896,
+  "common_count_by_numeric_stem": 896,
+  "radar_only": [],
+  "label_only": [],
+  "mat_sample": [
+    {
+      "file": "000881.mat",
+      "variables": {
+        "adcData": {
+          "shape": [
+            128,
+            255,
+            4,
+            2
+          ],
+          "dtype": "complex128",
+          "is_complex": true
+        }
+      }
+    },
+    {
+      "file": "000592.mat",
+      "variables": {
+        "adcData": {
+          "shape": [
+            128,
+            255,
+            4,
+            2
+          ],
+          "dtype": "complex128",
+          "is_complex": true
+        }
+      }
+    },
+    {
+      "file": "000107.mat",
+      "variables": {
+        "adcData": {
+          "shape": [
+            128,
+            255,
+            4,
+            2
+          ],
+          "dtype": "complex128",
+          "is_complex": true
+        }
+      }
+    },
+    {
+      "file": "000025.mat",
+      "variables": {
+        "adcData": {
+          "shape": [
+            128,
+            255,
+            4,
+            2
+          ],
+          "dtype": "complex128",
+          "is_complex": true
+        }
+      }
+    },
+    {
+      "file": "000011.mat",
+      "variables": {
+        "adcData": {
+          "shape": [
+            128,
+            255,
+            4,
+            2
+          ],
+          "dtype": "complex128",
+          "is_complex": true
+        }
+      }
+    }
+  ],
+  "label_sample": [
+    {
+      "file": "0000000695.csv",
+      "line_count": 1,
+      "first_lines": [
+        "17,2,0.16145913,9.27109757,4.5,1.8"
+      ]
+    },
+    {
+      "file": "0000000093.csv",
+      "line_count": 1,
+      "first_lines": [
+        "17,2,4.91319049,8.94748217,4.5,1.8"
+      ]
+    },
+    {
+      "file": "0000000792.csv",
+      "line_count": 1,
+      "first_lines": [
+        "17,2,-0.53904314,9.29400938,4.5,1.8"
+      ]
+    },
+    {
+      "file": "0000000402.csv",
+      "line_count": 1,
+      "first_lines": [
+        "17,2,3.02168526,9.08399518,4.5,1.8"
+      ]
+    },
+    {
+      "file": "0000000110.csv",
+      "line_count": 1,
+      "first_lines": [
+        "17,2,4.87477855,8.9638635,4.5,1.8"
+      ]
+    }
+  ],
+  "expected_shape": [
+    128,
+    255,
+    4,
+    2
+  ],
+  "class_counts": {
+    "2": 895
+  },
+  "empty_label_frames": 1,
+  "total_label_rows": 895,
+  "bad_column_examples": [],
+  "bad_column_file_count": 0,
+  "px_range": [
+    -1.42410014,
+    4.94858847
+  ],
+  "py_range": [
+    8.92818955,
+    9.60894922
+  ],
+  "wid_range": [
+    4.5,
+    4.5
+  ],
+  "len_range": [
+    1.8,
+    1.8
+  ],
+  "px_out_of_readme_range_count": 0,
+  "py_out_of_readme_range_count": 0,
+  "non_positive_wid_len_count": 0
+}

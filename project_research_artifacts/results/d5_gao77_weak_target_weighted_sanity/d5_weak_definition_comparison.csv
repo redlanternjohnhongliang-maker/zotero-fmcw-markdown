@@ -1,0 +1,3 @@
+﻿best_baseline,best_clean_mse,best_mid_pd,best_strong_pd,best_target_peak_abs_bias,best_weak_pd,best_weak_weight,split_definition_train
+weak_cfar_w5p0,0.04463693712820312,1.0,1.0,0.14867780285891202,0.17766497461928935,5.0,cfar_margin
+weak_peak_w2p0,0.045259687649677846,0.975609756097561,1.0,0.11439583970503175,0.38549618320610685,2.0,clean_peak_percentile

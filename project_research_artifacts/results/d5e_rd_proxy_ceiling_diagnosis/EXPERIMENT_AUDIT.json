@@ -1,0 +1,61 @@
+{
+  "date": "2026-06-27",
+  "auditor": "codex-subagent-xhigh",
+  "trace_path": "G:\\mineru_output\\.aris\\traces\\experiment-audit\\2026-06-27_run04",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "evaluation_type": "mixed_proxy",
+  "checks": {
+    "ground_truth_proxy_provenance": {
+      "status": "pass",
+      "details": "GAO77 labels provide range/object targets; RD Doppler boxes are explicitly diagnostic proxies, not Doppler GT."
+    },
+    "threshold_leakage": {
+      "status": "pass",
+      "details": "Weak thresholds are train-only; output flags threshold_leakage=false and used_test_clean_map_property_for_threshold=false."
+    },
+    "fixed_pfa_protocol": {
+      "status": "pass",
+      "details": "PFA thresholds are calibrated on validation background and measured on test background."
+    },
+    "mask_proxy_diagnostics": {
+      "status": "pass",
+      "details": "Mask and proxy diagnostics are computed through evaluation functions and written as CSV outputs."
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "No metric is normalized by model output extrema; raw hits, Pd, PFA, and FA are reported."
+    },
+    "result_existence_numeric_consistency": {
+      "status": "warn",
+      "details": "Core D5E artifacts and numbers are consistent. At audit time, handoff referenced audit/result-to-claim files before both existed."
+    },
+    "dead_code_metric_path": {
+      "status": "pass",
+      "details": "Required diagnostic functions are called and outputs are written."
+    },
+    "scope_constraints": {
+      "status": "pass",
+      "details": "No D6, no false alarm penalty, no clean identity full method, no full loss, no detector change, no larger model, no confirmed RD performance claim."
+    }
+  },
+  "action_items": [
+    "Generate RESULT_TO_CLAIM.md/json before final handoff.",
+    "Keep claims limited to RD-proxy ceiling diagnosis.",
+    "Do not proceed to D6 from this evidence."
+  ],
+  "claim_impact": [
+    {
+      "claim": "D5E diagnoses a ceiling effect in the current RD proxy setup.",
+      "impact": "supported_with_proxy_qualifier"
+    },
+    {
+      "claim": "Weak weighting improves RD weak-target preservation.",
+      "impact": "unsupported"
+    },
+    {
+      "claim": "Confirmed RD performance or D6 continuation.",
+      "impact": "unsupported"
+    }
+  ]
+}

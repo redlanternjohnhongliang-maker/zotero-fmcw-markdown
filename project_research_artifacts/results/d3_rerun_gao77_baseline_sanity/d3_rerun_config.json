@@ -1,0 +1,37 @@
+{
+  "stage": "D3-Rerun",
+  "strict_limits": {
+    "not_d4": true,
+    "no_focal_loss": true,
+    "no_balanced_bce": true,
+    "no_weak_target_full_loss": true,
+    "no_false_alarm_penalty": true,
+    "no_clean_identity_full_method": true,
+    "no_3_seeds": true,
+    "no_rdlr_diffirm_rimformer": true,
+    "no_d5": true
+  },
+  "model": "SimpleRangeFCN",
+  "train_frames": 300,
+  "train_samples": 600,
+  "val_frames": 160,
+  "val_samples": 320,
+  "test_frames": 160,
+  "batch_size": 4,
+  "tiny_steps": 120,
+  "small_epochs": 8,
+  "mse_lr": 0.0015,
+  "bce_lr": 0.0003,
+  "bce_temperature": 1.0,
+  "lambda_rec_values": [
+    0.1,
+    0.5,
+    1.0
+  ],
+  "best_lambda_rec": 0.5,
+  "normalization": {
+    "mean_db": 47.59535598754883,
+    "std_db": 4.9765400886535645
+  },
+  "device": "cuda"
+}

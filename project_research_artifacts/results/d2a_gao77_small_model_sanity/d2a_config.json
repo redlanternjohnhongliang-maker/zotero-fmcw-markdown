@@ -1,0 +1,73 @@
+{
+  "stage": "D2A",
+  "strict_limits": {
+    "only_d2a": true,
+    "no_d3_d14": true,
+    "no_formal_baseline": true,
+    "no_mse_bce_focal_comparison": true,
+    "no_weak_target_full_loss": true,
+    "no_3_seeds": true,
+    "no_rdlr_diffirm_rimformer": true,
+    "no_large_model": true
+  },
+  "model": {
+    "model": "SimpleRangeFCN",
+    "device": "cuda",
+    "input_shape": [
+      1,
+      1,
+      128
+    ],
+    "output_shape": [
+      1,
+      1,
+      128
+    ],
+    "parameter_count": 49536,
+    "train_sample_count": 256,
+    "val_sample_count": 128,
+    "test_frame_count": 64
+  },
+  "simple_fcn": {
+    "hidden": 128,
+    "residual_identity_init": true,
+    "learning_rate": 0.002,
+    "batch_size": 4,
+    "tiny_steps": 300,
+    "small_epochs": 25,
+    "identity_loss_weight": 0.05
+  },
+  "data": {
+    "train_frames": 128,
+    "train_samples": 256,
+    "val_frames": 64,
+    "val_samples_for_loss": 128,
+    "test_frames": 64,
+    "train_sir_names": [
+      "light",
+      "medium"
+    ],
+    "val_sir_names": [
+      "light",
+      "medium"
+    ],
+    "test_sir_names": [
+      "light",
+      "medium",
+      "severe"
+    ],
+    "severe_validation_generated_for_fixed_pfa_calibration_only": true
+  },
+  "normalization": {
+    "mean_db": 46.454002380371094,
+    "std_db": 4.33564567565918
+  },
+  "valid_pfa_targets": [
+    0.01,
+    0.001
+  ],
+  "mask_names": [
+    "default",
+    "narrow"
+  ]
+}

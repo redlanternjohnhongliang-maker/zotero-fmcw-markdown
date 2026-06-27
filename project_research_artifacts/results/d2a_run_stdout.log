@@ -1,0 +1,10 @@
+{
+  "d2a_pass": true,
+  "result_dir": "G:\\mineru_output\\results\\d2a_gao77_small_model_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d2a_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D2A_GAO77_SMALL_MODEL_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D2A_GAO77_SMALL_MODEL_SANITY_REPORT_20260626_211458.md",
+  "device": "cuda",
+  "train_samples": 256,
+  "val_samples": 128
+}

@@ -1,0 +1,57 @@
+{
+  "python_executable": "G:\\Anaconda\\envs\\cnn_learn\\python.exe",
+  "python_version": "3.9.24 (main, Oct 21 2025, 20:14:38) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "torch_available": true,
+  "torch_import_error": null,
+  "torch_version": "1.12.0+cu113",
+  "torch_cuda_available": true,
+  "torch_cuda_version": "11.3",
+  "cuda_device_count": 1,
+  "nvidia_smi": "NVIDIA GeForce GTX 1650, 4096 MiB, 1044 MiB, 581.80",
+  "numeric_data_files_found": [],
+  "numeric_data_file_count_sampled": 0,
+  "cuda_devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce GTX 1650",
+      "total_memory_gb": 3.99969482421875
+    }
+  ],
+  "rd_tensor_shape": [
+    1,
+    64,
+    128
+  ],
+  "rd_tensor_dtype": "float32",
+  "rd_tensor_bytes_per_sample": 32768,
+  "rd_tensor_mib_per_sample": 0.03125,
+  "dry_run_batch_size": 2,
+  "dry_run_tensor_mib_input_only": 0.0625,
+  "conservative_config": {
+    "batch_size": 2,
+    "num_workers": 0,
+    "mixed_precision": false,
+    "large_sweeps": false
+  },
+  "dry_run": {
+    "status": "ok",
+    "device": "cuda",
+    "input_shape": [
+      2,
+      1,
+      64,
+      128
+    ],
+    "output_shape": [
+      2,
+      1,
+      64,
+      128
+    ],
+    "loss": 0.033248480409383774,
+    "grad_finite": true,
+    "cuda_memory_allocated_mib": 0.18798828125,
+    "cuda_memory_reserved_mib": 2.0
+  }
+}

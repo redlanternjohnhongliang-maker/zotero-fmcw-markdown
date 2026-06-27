@@ -1,0 +1,27 @@
+{
+  "representation": "range_only_primary",
+  "range_resolution_m": 0.22372571492537313,
+  "max_range_m": 28.63689151044776,
+  "valid_range_min_bin": 2,
+  "valid_range_max_bin": 124,
+  "target_radius_bins_min": 2,
+  "target_radius_bins_max": 12,
+  "guard_extra_bins": 4,
+  "cfar_guard_cells": 2,
+  "cfar_training_cells": 10,
+  "cfar_score": "CUT_power / local_training_mean_power",
+  "differentiable_cfar": {
+    "implemented": true,
+    "backend": "torch conv1d",
+    "threshold_used": 3.7472010503199518,
+    "temperature": 0.7,
+    "hard_soft_score_correlation": 0.9641706210112282,
+    "soft_target_mean": 0.10509946197271347,
+    "soft_background_mean": 0.034143414348363876,
+    "hard_detection_rate_at_threshold": 0.03705691056910569
+  },
+  "fixed_pfa_targets": [
+    0.01,
+    0.001
+  ]
+}

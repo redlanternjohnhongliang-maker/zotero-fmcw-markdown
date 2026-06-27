@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-27",
+  "reviewer": "codex-subagent-xhigh",
+  "trace_path": "G:\\mineru_output\\.aris\\traces\\result-to-claim\\2026-06-27_run03",
+  "claim_supported": "partial",
+  "integrity_status": "warn",
+  "confidence": "medium",
+  "final_route": "NEVER_ENTER_D6_IMMEDIATELY",
+  "what_results_support": [
+    "D5E supports that the D5D default RD-proxy evaluation is saturated: at PFA=1e-2, both seeds have weak_n=62, balanced_mild_weak_hits=62, weak_pd=1.0, and 0 missed weak targets.",
+    "D5E supports that the current RD proxy task is too easy or too saturated for weak-weighting evaluation: q10/q20/q30/q40 subsets, mask-width variants, and proxy-label variants saturate.",
+    "D5E supports a limited RD-proxy ceiling diagnosis, not confirmed RD performance."
+  ],
+  "what_results_dont_support": [
+    "It does not support continuing weak weighting.",
+    "At PFA=1e-3, mean weak Pd delta is -0.0161 and mean hit delta is -1.",
+    "It does not support entering D6.",
+    "It does not prove ceiling effect is the only reason weak weighting fails.",
+    "It does not support confirmed RD performance."
+  ],
+  "missing_evidence": [
+    "A non-saturated RD task with validated target labels.",
+    "True Doppler/velocity ground truth or a proxy proven not to be clean-peak or overbroad-box optimistic.",
+    "More seeds/splits, larger weak-target sample size, and robust positive weak-hit gains under fixed PFA."
+  ],
+  "suggested_claim_revision": "D5E shows that the current RD-only proxy evaluation is saturated: the balanced baseline already detects all proxy weak targets at the main PFA, so D5D cannot measure incremental weak-weighting benefit. Additional diagnostics do not reveal a weak-weighting advantage. This is limited RD-proxy negative/diagnostic evidence, not confirmed RD performance.",
+  "next_experiments_needed": [
+    "Repair RD proxy/task difficulty first.",
+    "Use harder, validated RD labels or true Doppler/velocity evidence.",
+    "Avoid clean-peak/overbroad proxy boxes.",
+    "Increase weak-target sample size.",
+    "Rerun balanced vs weak weighting under fixed PFA, multiple seeds/splits, and pre-registered hit/Pd bars before reconsidering D6."
+  ],
+  "question_calls": {
+    "d5d_no_go_mainly_affected_by_ceiling": "partial",
+    "current_rd_proxy_too_easy_or_saturated": "yes",
+    "continue_weak_weighting": "no",
+    "enter_d6": "no",
+    "conservative_report_conclusion": "limited RD-proxy ceiling diagnosis plus negative weak-weighting evidence",
+    "fix_first": "RD proxy/task difficulty and label validity"
+  }
+}

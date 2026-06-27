@@ -1,0 +1,20 @@
+D2A model summary
+
+Model: SimpleRangeFCN
+Input shape: batch x 1 x 128
+Output shape: batch x 1 x 128
+Parameter count: 131712
+Trainable parameters: 131712
+Device: cuda
+Normalization mean dB: 47.600529
+Normalization std dB: 4.977773
+Architecture:
+SimpleRangeFCN(
+  (net): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=256, out_features=128, bias=True)
+  )
+)

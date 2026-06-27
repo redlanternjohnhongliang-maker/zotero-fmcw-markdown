@@ -1,0 +1,14 @@
+representation,required_labels,available_true_labels,proxy_labels,missing_labels,gao77_support,final_label_blocker
+range_only,class/objectness; range projection; target/background mask; weak split,class/objectness,range; weak target; background mask,,supported baseline,baseline only; range collapse/proxy
+corrected_RD,range + Doppler/RD boxes; weak split; fixed-PFA background,class/objectness; range,clean/interfered RD peak Doppler,true Doppler/velocity,computable proxy audit,no true Doppler and D5E saturation
+corrected_RA,range + calibrated azimuth; weak split,class/objectness; range,px/py azimuth projection,calibrated radar angle GT,calibration audit only,angle calibration unresolved
+RAD,3D range-azimuth-Doppler boxes or dense masks,class/objectness; range proxy,possible constructed proxy,true Doppler; RAD boxes,not supported for confirmed Gao77 claims,missing RAD boxes
+temporal_RD,track IDs; frame continuity; RD labels,range proxy,sequence continuity; RD peak proxy,track IDs; true velocity/Doppler,insufficient without tracks,missing track IDs
+temporal_RA,track IDs; calibrated RA labels,range proxy,azimuth projection; frame continuity,track IDs; calibrated RA,insufficient while RA unresolved,missing tracks and RA calibration
+temporal_RAD,track IDs + RAD boxes,range proxy,none sufficient,track IDs; RAD boxes; Doppler,not supported,missing RAD and temporal labels
+STFT_spectrogram,raw ADC/beat signal; projected target/background; weak split,raw ADC,range/frequency projection,true signal-domain target labels,signal diagnostic only,labels project only to range/frequency
+complex_IQ,raw complex ADC; phase/no-harm label; projected object labels,raw complex ADC,range/azimuth projections,phase-aware object GT,availability/proxy audit,no phase/object GT
+complex_RD,complex RD tensor; RD target boxes; phase no-harm,raw complex ADC,clean/interfered RD peak proxy,true Doppler,proxy audit only,no true Doppler
+raw_ADC,raw ADC; deterministic score; projected object labels,raw complex ADC,downstream FFT/range projection,raw-domain target labels,availability/proxy audit,no raw-domain target mask
+raw_ADC_learnable_FFT,raw ADC + learned transform + detection labels,raw complex ADC,none allowed in D5H,training route labels/validated objective,future only,learned FFT implies forbidden training
+radar_point_cloud,CFAR points + point/object labels,range/azimuth proxy,CFAR point-to-label matching,point labels/tracks,auxiliary diagnostic only,weak targets may disappear before point cloud

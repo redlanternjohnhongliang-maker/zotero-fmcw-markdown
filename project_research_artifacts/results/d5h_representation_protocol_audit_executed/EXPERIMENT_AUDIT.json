@@ -1,0 +1,63 @@
+{
+  "date": "2026-06-27 23:51:06",
+  "auditor": "Codex subagent gpt-5.5 xhigh, read-only",
+  "trace_path": "G:\\mineru_output\\.aris\\traces\\experiment-audit\\2026-06-27_run05",
+  "overall_verdict": "WARN",
+  "integrity_status": "warn",
+  "post_review_fixes_applied": [
+    "Tightened fixed_pfa_flag to a 25%/1e-4 absolute tolerance and reran D5H-Exec.",
+    "Range-only PFA=1e-3 is now marked warn rather than yes.",
+    "Stricter-PFA diagnostic dictionaries are blank for non-RD/non-executable rows.",
+    "Phase 0 weak-threshold evidence is parsed from d5d_rd_weak_thresholds.json and rerun."
+  ],
+  "checks": {
+    "no_training_boundary": {
+      "status": "PASS",
+      "details": "D5H script reads local files/prior tables only; config blocks training, D6, false alarm penalty, detector changes, fixed-PFA protocol modification, and new data downloads."
+    },
+    "gt_proxy_provenance": {
+      "status": "PASS",
+      "details": "Objectness/class and projected range/azimuth are separated from absent true Doppler, velocity, RAD boxes, and temporal tracks."
+    },
+    "fixed_pfa_consistency": {
+      "status": "WARN",
+      "details": "Reviewer found initially loose fixed-PFA feasibility flags; local patch tightened flags and reran, but no second external review was requested."
+    },
+    "result_existence": {
+      "status": "PASS",
+      "details": "Required D5H CSV/MD/JSON outputs and analyze-results outputs exist and agree on no pass."
+    },
+    "dead_code_metric_mismatch": {
+      "status": "WARN",
+      "details": "Reviewer found hard-coded Phase 0 weak-threshold text; local patch now parses D5D threshold JSON and reran."
+    },
+    "scope_claim_inflation": {
+      "status": "PASS",
+      "details": "Outputs do not inflate RD/RA/RAD proxy evidence into confirmed performance and keep D6/minimal sanity blocked."
+    }
+  },
+  "eligibility_label_conservatism": "conservative; no-pass is supported; proxy-only rows must be treated as ineligible for confirmed Gao77 performance",
+  "action_items": [
+    "Keep proxy-only rows barred from D6 and minimal model sanity.",
+    "Treat fixed-PFA feasibility for range-only PFA=1e-3 as warning/qualified evidence.",
+    "Use a label/protocol pivot before any training route."
+  ],
+  "claim_impact": [
+    {
+      "claim": "D5H-Exec was no-training and boundary compliant",
+      "impact": "supported"
+    },
+    {
+      "claim": "Any representation is eligible for minimal model sanity",
+      "impact": "unsupported"
+    },
+    {
+      "claim": "RD/RA/RAD show confirmed performance",
+      "impact": "unsupported"
+    },
+    {
+      "claim": "Current route should continue weak weighting or enter D6",
+      "impact": "unsupported"
+    }
+  ]
+}

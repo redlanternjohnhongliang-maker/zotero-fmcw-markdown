@@ -1,0 +1,31 @@
+D2A model summary
+
+Model: SimpleRangeFCN
+Input shape: batch x 1 x 128
+Output shape: batch x 1 x 128
+Parameter count: 7921
+Trainable parameters: 7921
+Device: cuda
+Normalization mean dB: 47.600529
+Normalization std dB: 4.977773
+Architecture:
+ShallowRangeUNet1D(
+  (enc1): Sequential(
+    (0): Conv1d(1, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+    (1): ReLU()
+    (2): Conv1d(16, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+    (3): ReLU()
+  )
+  (down): AvgPool1d(kernel_size=(2,), stride=(2,), padding=(0,))
+  (enc2): Sequential(
+    (0): Conv1d(16, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+    (1): ReLU()
+    (2): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+    (3): ReLU()
+  )
+  (dec): Sequential(
+    (0): Conv1d(48, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+    (1): ReLU()
+    (2): Conv1d(16, 1, kernel_size=(3,), stride=(1,), padding=(1,))
+  )
+)

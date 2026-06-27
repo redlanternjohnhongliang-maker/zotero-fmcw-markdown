@@ -1,0 +1,44 @@
+{
+  "stage": "D1B",
+  "strict_limits": {
+    "no_training": true,
+    "no_d2_d14": true,
+    "no_mitigation_model": true,
+    "no_aenn_fcn_rdlr_diffirm_rimformer": true,
+    "no_new_dataset": true,
+    "range_only_primary": true,
+    "ra_auxiliary_only": true
+  },
+  "interference_model": "simplified synthetic FMCW-like mutual interference model for sanity only",
+  "sir_configs": [
+    {
+      "sir_name": "light",
+      "sir_db": 10.0,
+      "num_interferers": 1
+    },
+    {
+      "sir_name": "medium",
+      "sir_db": 0.0,
+      "num_interferers": 2
+    },
+    {
+      "sir_name": "severe",
+      "sir_db": -10.0,
+      "num_interferers": 3
+    }
+  ],
+  "mask_names": [
+    "default",
+    "narrow"
+  ],
+  "valid_pfa_targets": [
+    0.01,
+    0.001
+  ],
+  "cfar_guard": 2,
+  "cfar_train": 10,
+  "subset_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "clean_adc_power_mean": 1416.9483240425857,
+  "n_frames": 1500,
+  "n_targets": 6168
+}

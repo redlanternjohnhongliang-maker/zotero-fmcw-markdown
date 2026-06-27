@@ -1,0 +1,14 @@
+representation,input_shape_estimate,dtype_assumption,per_sample_mb_estimate,sanity_batch_estimate,sanity_batch_tensor_mb_estimate,fits_gtx1650_4gb_sanity_subset,caveat
+range_only,128,float32,0.0005,64,0.0312,True,range profile only
+corrected_RD,128x255,float32 magnitude/dB,0.1245,16,1.9922,True,2D RD smoke map
+corrected_RA,128x64,float32 magnitude/dB,0.0312,16,0.5,True,2D RA smoke map
+RAD,128x64x255,float32 magnitude/dB,7.9688,2,15.9375,True,"tensor memory feasible for tiny sanity, labels missing"
+temporal_RD,T4x128x255,float32 magnitude/dB,0.498,4,1.9922,True,tracks missing
+temporal_RA,T4x128x64,float32 magnitude/dB,0.125,4,0.5,True,tracks and RA calibration missing
+temporal_RAD,T4x128x64x255,float32 magnitude/dB,31.875,1,31.875,True,large but tiny subset fits; labels missing
+STFT_spectrogram,rx/tx aggregated 255x128,float32 magnitude,0.1245,16,1.9922,True,rough no-training score estimate
+complex_IQ,128x255x4x2,complex64 converted to real/imag,1.9922,4,7.9688,True,raw MAT is complex128; conversion assumed for sanity
+complex_RD,128x255x2,real/imag float32,0.249,8,1.9922,True,phase retained but labels proxy
+raw_ADC,128x255x4x2,complex64 converted to real/imag,1.9922,4,7.9688,True,memory feasible for tiny no-training audit
+raw_ADC_learnable_FFT,128x255x4x2,complex64 converted to real/imag,1.9922,4,7.9688,False,training transform is forbidden in D5H
+radar_point_cloud,variable sparse points,float32 attributes,0.1,64,6.4,True,point labels missing; weak targets may be pre-filtered

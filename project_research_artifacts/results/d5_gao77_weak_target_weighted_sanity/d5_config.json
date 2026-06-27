@@ -1,0 +1,40 @@
+{
+  "stage": "D5",
+  "strict_limits": {
+    "only_d5": true,
+    "no_d6_d14": true,
+    "no_false_alarm_penalty": true,
+    "no_clean_identity_full_method": true,
+    "no_proposed_full_loss": true,
+    "no_3_seeds": true,
+    "no_rdlr_diffirm_rimformer": true,
+    "no_large_model": true
+  },
+  "model": "SimpleRangeFCN",
+  "lambda_rec": 0.5,
+  "weak_weights": [
+    2.0,
+    3.0,
+    5.0
+  ],
+  "weak_definitions": [
+    "clean_peak_percentile",
+    "cfar_margin"
+  ],
+  "train_frames": 300,
+  "train_samples": 600,
+  "val_frames": 160,
+  "val_samples": 320,
+  "test_frames": 160,
+  "batch_size": 4,
+  "tiny_steps": 120,
+  "small_epochs": 8,
+  "bce_lr": 0.0003,
+  "bce_temperature": 1.0,
+  "best_d5_config": "weak_peak_w2p0",
+  "normalization": {
+    "mean_db": 47.59535598754883,
+    "std_db": 4.9765400886535645
+  },
+  "device": "cuda"
+}

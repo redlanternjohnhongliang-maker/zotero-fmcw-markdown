@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-27",
+  "auditor": "independent-codex-subagent-xhigh",
+  "auditor_agent_id": "019f0851-8697-7173-9742-8b9fdf6faa49",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "eval_type": "diagnostic_proxy",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Dataset label files provide px/py targets, but weak strata and RA projection are diagnostic proxies rather than calibrated RA ground truth."
+    },
+    "score_normalization": {
+      "status": "warn",
+      "details": "Fixed-PFA metrics use validation quantiles and count denominators; D1A-style local projection is frame-percentile/local-contrast sanity and must not be treated as fixed-PFA performance."
+    },
+    "result_existence": {
+      "status": "pass",
+      "details": "Required CSV/JSON/Markdown files exist and key numbers match."
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "Metric functions are called by d5c_ra_rca_self_check.py and row counts match the sweep design."
+    },
+    "scope": {
+      "status": "pass",
+      "details": "Reports keep the claim ceiling at RA projection/mapping/mask diagnostic proxy and do not claim RA method performance."
+    },
+    "ra_specific": {
+      "status": "warn",
+      "details": "Checks cover formula/unit/sign/bin, FFT axis, RX/virtual antenna dimension, mask width, weak subset, and D1A/D5C alignment. Remaining warnings are rough RA smoke map, angle-axis geometry mismatch, and suspicious unshifted-bin empirical row."
+    },
+    "eval_type": "diagnostic_proxy"
+  },
+  "action_items": [
+    {
+      "item": "Add explicit eval_type: diagnostic_proxy to reports/config.",
+      "status": "applied"
+    },
+    {
+      "item": "Add candidate and bin_mode to D1A-vs-D5C consistency table.",
+      "status": "applied"
+    },
+    {
+      "item": "Do not use D1A-style local hit rates as fixed-PFA RA success.",
+      "status": "applied"
+    },
+    {
+      "item": "Require calibrated RA validation before any RA performance claim.",
+      "status": "recorded"
+    }
+  ],
+  "claim_impact": [
+    {
+      "claim": "Prior D5C RA weak fixed-PFA value was reproduced.",
+      "impact": "supported"
+    },
+    {
+      "claim": "D1A/D5C gap is largely criterion/scope.",
+      "impact": "supported"
+    },
+    {
+      "claim": "Clear physical angle-coordinate bug caused prior RA result.",
+      "impact": "unsupported"
+    },
+    {
+      "claim": "RA method performance or weak-target weighting success.",
+      "impact": "unsupported"
+    }
+  ],
+  "trace_path": "G:\\mineru_output\\.aris\\traces\\experiment-audit\\2026-06-27_run03"
+}

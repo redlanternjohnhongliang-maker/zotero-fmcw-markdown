@@ -1,0 +1,4 @@
+﻿class_group,projection_hit_count,projection_hit_rate,target_background_ratio_db_mean,target_background_ratio_db_std,target_count,valid_projection_count
+cyclist_like,1579,0.9887288666249218,12.624190472884276,5.895963919104786,1597,1597
+pedestrian_like,1384,0.9617790132036136,9.708997360190278,4.951505522388594,1439,1439
+vehicle_like,3130,0.9993614303959132,13.119628841163388,4.4795146884201715,3132,3132

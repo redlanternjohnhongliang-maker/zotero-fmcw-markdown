@@ -1,0 +1,300 @@
+{
+  "stage": "D5H analyze-results",
+  "date": "2026-06-27 23:48:05",
+  "result_dir": "G:\\mineru_output\\results\\d5h_representation_protocol_audit_executed",
+  "csv_summary": [
+    {
+      "file": "d5h_fixed_pfa_feasibility.csv",
+      "rows": 13,
+      "columns": 9,
+      "column_names": [
+        "representation",
+        "can_calibrate_pfa_1e_2",
+        "measured_pfa_1e_2",
+        "can_calibrate_pfa_1e_3",
+        "measured_pfa_1e_3",
+        "stricter_pfa_5e_4",
+        "stricter_pfa_1e_4",
+        "feasibility_note",
+        "final_eligibility_label"
+      ]
+    },
+    {
+      "file": "d5h_gpu_memory_feasibility.csv",
+      "rows": 13,
+      "columns": 8,
+      "column_names": [
+        "representation",
+        "input_shape_estimate",
+        "dtype_assumption",
+        "per_sample_mb_estimate",
+        "sanity_batch_estimate",
+        "sanity_batch_tensor_mb_estimate",
+        "fits_gtx1650_4gb_sanity_subset",
+        "caveat"
+      ]
+    },
+    {
+      "file": "d5h_overlap_separability_comparison.csv",
+      "rows": 13,
+      "columns": 9,
+      "column_names": [
+        "representation",
+        "weak_overlap_ratio",
+        "weak_overlap_delta_vs_range_only",
+        "weak_overlap_improves_vs_range_only",
+        "weak_separability_proxy_db",
+        "weak_separability_gain_vs_range_only_db",
+        "weak_separability_improves_vs_range_only",
+        "weak_projection_hit_rate",
+        "final_eligibility_label"
+      ]
+    },
+    {
+      "file": "d5h_phase0_label_inventory.csv",
+      "rows": 10,
+      "columns": 7,
+      "column_names": [
+        "label_or_protocol_item",
+        "status",
+        "true_label_available",
+        "proxy_available",
+        "observed_local_evidence",
+        "confirmation_method",
+        "claim_ceiling"
+      ]
+    },
+    {
+      "file": "d5h_phase1_representation_audit.csv",
+      "rows": 13,
+      "columns": 26,
+      "column_names": [
+        "representation",
+        "input_shape_estimate",
+        "information_kept",
+        "information_lost",
+        "label_source",
+        "proxy_label_dependence",
+        "leakage_risk",
+        "weak_n_estimate",
+        "projection_hit_rate",
+        "weak_projection_hit_rate",
+        "overlap_ratio",
+        "weak_overlap_ratio",
+        "separability_proxy_db",
+        "weak_separability_proxy_db",
+        "target_background_contrast_db",
+        "fixed_pfa_1e_2_measured",
+        "fixed_pfa_1e_2_feasible",
+        "fixed_pfa_1e_3_measured",
+        "fixed_pfa_1e_3_feasible",
+        "stricter_pfa_feasibility",
+        "baseline_saturation_risk",
+        "clean_no_harm_definability",
+        "gtx1650_4gb_memory_feasible",
+        "final_eligibility_label",
+        "final_reason",
+        "evidence_source"
+      ]
+    },
+    {
+      "file": "d5h_proxy_label_risk_table.csv",
+      "rows": 13,
+      "columns": 6,
+      "column_names": [
+        "representation",
+        "proxy_source",
+        "leakage_risk",
+        "proxy_optimism_risk",
+        "mitigation",
+        "claim_ceiling"
+      ]
+    },
+    {
+      "file": "d5h_representation_label_requirements.csv",
+      "rows": 13,
+      "columns": 7,
+      "column_names": [
+        "representation",
+        "required_labels",
+        "available_true_labels",
+        "proxy_labels",
+        "missing_labels",
+        "gao77_support",
+        "final_label_blocker"
+      ]
+    },
+    {
+      "file": "d5h_saturation_risk.csv",
+      "rows": 13,
+      "columns": 8,
+      "column_names": [
+        "representation",
+        "baseline_weak_pd_or_projection_hit_at_pfa_1e_2",
+        "weak_n",
+        "baseline_weak_hits",
+        "improvement_room_weak_hits",
+        "saturation_risk",
+        "note",
+        "final_eligibility_label"
+      ]
+    }
+  ],
+  "final_rows": [
+    {
+      "representation": "range_only",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "262",
+      "pfa_1e_2": "yes",
+      "pfa_1e_3": "warn",
+      "main_reason": "Baseline/reference only; does not improve over range-only by definition and cannot be a positive route."
+    },
+    {
+      "representation": "corrected_RD",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "62",
+      "pfa_1e_2": "yes",
+      "pfa_1e_3": "yes",
+      "main_reason": "Relies on Doppler proxy, D5E weak_n=62<100, and main-PFA baseline is saturated."
+    },
+    {
+      "representation": "corrected_RA",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "262",
+      "pfa_1e_2": "yes",
+      "pfa_1e_3": "yes",
+      "main_reason": "Original weak hit=0.0305; best physical weak hit=0.0941; calibration unresolved."
+    },
+    {
+      "representation": "RAD",
+      "final_eligibility_label": "insufficient-labels",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "No true RAD boxes in Gao77 subset."
+    },
+    {
+      "representation": "temporal_RD",
+      "final_eligibility_label": "insufficient-labels",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "No track IDs; frame continuity alone is not a label."
+    },
+    {
+      "representation": "temporal_RA",
+      "final_eligibility_label": "insufficient-labels",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "No tracks and RA calibration does not pass."
+    },
+    {
+      "representation": "temporal_RAD",
+      "final_eligibility_label": "insufficient-labels",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Both RAD and temporal labels are absent."
+    },
+    {
+      "representation": "STFT_spectrogram",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Can be signal diagnostic from raw ADC, but object labels are projected proxies."
+    },
+    {
+      "representation": "complex_IQ",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Raw complex ADC exists, but target/background labels remain projected."
+    },
+    {
+      "representation": "complex_RD",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Same RD label limit; phase preservation does not fix label validity."
+    },
+    {
+      "representation": "raw_ADC",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Memory/availability audit only; deterministic FFT projection remains proxy."
+    },
+    {
+      "representation": "raw_ADC_learnable_FFT",
+      "final_eligibility_label": "insufficient-labels",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Learnable FFT implies training and is excluded from D5H."
+    },
+    {
+      "representation": "radar_point_cloud",
+      "final_eligibility_label": "proxy-only",
+      "weak_n_estimate": "",
+      "pfa_1e_2": "not_available",
+      "pfa_1e_3": "not_available",
+      "main_reason": "Auxiliary only; weak targets may be removed before point-cloud generation."
+    }
+  ],
+  "label_groups": {
+    "pass": [],
+    "proxy-only": [
+      "range_only",
+      "corrected_RD",
+      "corrected_RA",
+      "STFT_spectrogram",
+      "complex_IQ",
+      "complex_RD",
+      "raw_ADC",
+      "radar_point_cloud"
+    ],
+    "insufficient-labels": [
+      "RAD",
+      "temporal_RD",
+      "temporal_RA",
+      "temporal_RAD",
+      "raw_ADC_learnable_FFT"
+    ],
+    "fail": []
+  },
+  "any_pass": false,
+  "should_allow_minimal_model_sanity": false,
+  "should_continue_weak_weighting": false,
+  "should_enter_d6": false,
+  "findings": [
+    {
+      "id": 1,
+      "finding": "No representation passed the D5H gate.",
+      "evidence": "pass=[]",
+      "implication": "Do not allow minimal model sanity from current Gao77 evidence."
+    },
+    {
+      "id": 2,
+      "finding": "Corrected RD is computable and separable, but still proxy-only.",
+      "evidence": "D5E weak_n=62, clean/interfered RD peak proxy, and PFA=1e-2 saturation.",
+      "implication": "Do not write RD proxy as confirmed RD performance."
+    },
+    {
+      "id": 3,
+      "finding": "Corrected RA remains calibration-inconclusive.",
+      "evidence": "Original weak hit rate is low and best physical RCA row remains proxy evidence.",
+      "implication": "Do not treat RA as invalid; treat it as unresolved."
+    },
+    {
+      "id": 4,
+      "finding": "RAD and temporal routes are blocked by missing labels.",
+      "evidence": "No RAD boxes, no velocity labels, and no track IDs found in the local Gao77 subset.",
+      "implication": "Use a label/protocol pivot rather than more training."
+    }
+  ]
+}

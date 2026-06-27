@@ -1,0 +1,14 @@
+representation,weak_overlap_ratio,weak_overlap_delta_vs_range_only,weak_overlap_improves_vs_range_only,weak_separability_proxy_db,weak_separability_gain_vs_range_only_db,weak_separability_improves_vs_range_only,weak_projection_hit_rate,final_eligibility_label
+range_only,0.2786259541984733,0.0,False,5.935464501424592,0.0,False,0.3511450381679389,proxy-only
+corrected_RD,0.1946564885496183,-0.08396946564885499,True,30.8048958669182,24.86943136549361,True,1.0,proxy-only
+corrected_RA,0.0648854961832061,-0.2137404580152672,True,9.027531631120288,3.092067129695696,True,0.030534351145038167,proxy-only
+RAD,,,,,,,,insufficient-labels
+temporal_RD,,,,,,,,insufficient-labels
+temporal_RA,,,,,,,,insufficient-labels
+temporal_RAD,,,,,,,,insufficient-labels
+STFT_spectrogram,,,,,,,,proxy-only
+complex_IQ,,,,,,,,proxy-only
+complex_RD,,,,,,,,proxy-only
+raw_ADC,,,,,,,,proxy-only
+raw_ADC_learnable_FFT,,,,,,,,insufficient-labels
+radar_point_cloud,,,,,,,,proxy-only

@@ -1,0 +1,7 @@
+﻿azimuth_max,azimuth_mean,azimuth_min,azimuth_std,class_distribution,empty_frames,frame_count,multi_target_frames,range_max,range_mean,range_min,range_std,single_target_frames,source_sequence,target_count_max,target_count_mean,target_count_median,target_count_min,target_total
+,,,,,0,300,256,,,,,44,2019_04_30_mlms000,,,,,669
+,,,,,0,300,284,,,,,16,2019_04_30_mlms001,,,,,741
+,,,,,0,300,300,,,,,0,2019_05_09_bm1s007,,,,,1484
+,,,,,0,300,300,,,,,0,2019_05_09_cm1s003,,,,,1378
+,,,,,0,300,300,,,,,0,2019_05_09_mlms003,,,,,1896
+48.40996542311242,0.17701099690955976,-59.117590946887006,34.0173362016499,0:1439;1:77;2:3132;80:1520,0,1500,1440,23.86426826868991,13.217909550408839,1.4867750334196497,6.24975827136891,60,,8,4.112,5.0,1,6168

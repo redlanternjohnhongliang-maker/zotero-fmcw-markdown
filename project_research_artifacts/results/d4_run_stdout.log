@@ -1,0 +1,8 @@
+{
+  "d4_pass": true,
+  "best_strong_baseline": "balanced_mild",
+  "result_dir": "G:\\mineru_output\\results\\d4_gao77_strong_baseline_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d4_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D4_GAO77_STRONG_BASELINE_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D4_GAO77_STRONG_BASELINE_SANITY_REPORT_20260626_231530.md"
+}

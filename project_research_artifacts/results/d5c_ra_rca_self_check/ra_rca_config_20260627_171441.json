@@ -1,0 +1,142 @@
+{
+  "stage": "D5C-RA-RCA",
+  "date": "2026-06-27T17:14:41.376077",
+  "eval_type": "diagnostic_proxy",
+  "dataset": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "result_dir": "G:\\mineru_output\\results\\d5c_ra_rca_self_check",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures",
+  "python": "G:\\Anaconda\\envs\\cnn_learn\\python.exe",
+  "constraints": {
+    "entered_d6": false,
+    "false_alarm_penalty": false,
+    "clean_identity_full_method": false,
+    "proposed_full_loss": false,
+    "large_model_training": false,
+    "detector_modified": false,
+    "fixed_pfa_protocol_modified": false,
+    "ra_smoke_written_as_confirmed_performance": false
+  },
+  "split": {
+    "val_frame_count": 160,
+    "test_frame_count": 160,
+    "d5c_split_key": "clean_peak_percentile"
+  },
+  "angle_candidates": [
+    {
+      "candidate": "atan2_px_py_current",
+      "formula": "atan2(px, py)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_py_px_current",
+      "formula": "atan2(py, px)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_neg_px_py_current",
+      "formula": "atan2(-px, py)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_px_neg_py_current",
+      "formula": "atan2(px, -py)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_px_py_degrees_treated_as_radians",
+      "formula": "atan2(px, py)",
+      "unit_mode": "degrees_treated_as_radians",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_px_py_radians_treated_as_degrees",
+      "formula": "atan2(px, py)",
+      "unit_mode": "radians_treated_as_degrees",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "normal"
+    },
+    {
+      "candidate": "atan2_px_py_axis_reversed",
+      "formula": "atan2(px, py)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "fftshift_linear_sin",
+      "axis_sign": "reversed"
+    },
+    {
+      "candidate": "atan2_px_py_unshifted_bins_on_shifted_map",
+      "formula": "atan2(px, py)",
+      "unit_mode": "degrees_correct",
+      "bin_mode": "unshifted_bins_on_shifted_map",
+      "axis_sign": "normal"
+    }
+  ],
+  "angle_total_widths": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    10
+  ],
+  "range_mask_names": [
+    "narrow",
+    "default",
+    "wide"
+  ],
+  "primary_pfa": 0.01,
+  "secondary_pfa": 0.001,
+  "decision": {
+    "verdict": "RA prior result is sensitive but not physically restored",
+    "bug_found": false,
+    "original_matches_prior": true,
+    "original_weak_hit_rate": 0.030534351145038167,
+    "best_empirical_candidate": "atan2_px_py_unshifted_bins_on_shifted_map",
+    "best_empirical_range_mask_name": "wide",
+    "best_empirical_angle_total_width_bins": 10,
+    "best_empirical_target_hit_rate": 0.17829457364341086,
+    "best_empirical_weak_hit_rate": 0.1843137254901961,
+    "best_physical_candidate": "atan2_px_py_current",
+    "best_physical_range_mask_name": "wide",
+    "best_physical_angle_total_width_bins": 10,
+    "best_physical_target_hit_rate": 0.21705426356589147,
+    "best_physical_weak_hit_rate": 0.09411764705882353,
+    "weak_hit_gain_vs_original_physical": 0.06358329591378536,
+    "weak_hit_gain_vs_original_empirical": 0.15377937434515793,
+    "empirical_physically_suspicious": true,
+    "next_step": "Keep RA inconclusive; optional RCA follow-up should justify angle-axis physics before any RA rerun.",
+    "d6_allowed": false
+  },
+  "output_files": [
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_label_azimuth_formula_audit.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_label_azimuth_formula_audit_20260627_171438.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_angle_axis_audit.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_angle_axis_audit_20260627_171438.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_fft_axis_audit.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_fft_axis_audit_20260627_171438.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_mask_width_sensitivity.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_mask_width_sensitivity_20260627_171438.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_projection_hit_breakdown.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_projection_hit_breakdown_20260627_171438.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_d1a_vs_d5c_consistency.csv",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_d1a_vs_d5c_consistency_20260627_171438.csv",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\azimuth_distribution_comparison.png",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\angle_axis_visualization.png",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\angle_error_histogram.png",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\mask_width_vs_hit_rate_curve.png",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\ra_target_overlay_examples.png",
+    "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5c_ra_rca_figures\\d1a_vs_d5c_hit_criterion_comparison.png",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_rca_summary.md",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_rca_summary_20260627_171441.md",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_rca_decision.md",
+    "G:\\mineru_output\\results\\d5c_ra_rca_self_check\\ra_rca_decision_20260627_171441.md"
+  ]
+}

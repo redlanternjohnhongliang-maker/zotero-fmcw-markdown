@@ -1,0 +1,9 @@
+{
+  "d5_pass": true,
+  "best_d5_config": "weak_peak_w2p0",
+  "next_step": "可以进入 D6 false alarm penalty；D6 必须验证 weak Pd 提升不是靠 false alarm 或 target peak inflation 换来的。",
+  "result_dir": "G:\\mineru_output\\results\\d5_gao77_weak_target_weighted_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D5_GAO77_WEAK_TARGET_WEIGHTED_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D5_GAO77_WEAK_TARGET_WEIGHTED_SANITY_REPORT_20260627_121516.md"
+}

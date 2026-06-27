@@ -1,0 +1,73 @@
+﻿{
+    "date":  "2026-06-27",
+    "auditor":  "independent-codex-subagent-xhigh",
+    "overall_verdict":  "WARN",
+    "integrity_status":  "warn",
+    "checks":  {
+                   "gt_provenance":  {
+                                         "status":  "warn",
+                                         "details":  "Targets are label-file derived, but weak strata are clean-map proxy and RD/RA is smoke-only."
+                                     },
+                   "score_normalization":  {
+                                               "status":  "pass",
+                                               "details":  "No model-output self-normalization found."
+                                           },
+                   "result_existence":  {
+                                            "status":  "pass",
+                                            "details":  "Audited files exist and summary numbers match CSV rows."
+                                        },
+                   "dead_code":  {
+                                     "status":  "pass",
+                                     "details":  "Key metric functions are called into outputs."
+                                 },
+                   "wrong_baseline":  {
+                                          "status":  "pass",
+                                          "details":  "balanced_mild is primary baseline; MSE is not primary baseline."
+                                      },
+                   "pfa_threshold_leakage":  {
+                                                 "status":  "pass",
+                                                 "details":  "Thresholds use validation background and measure on test background."
+                                             },
+                   "weak_target_split_leakage":  {
+                                                     "status":  "warn",
+                                                     "details":  "Weak splits are globally derived from clean target values before train/test usage."
+                                                 },
+                   "mask_non_overlap_consistency":  {
+                                                        "status":  "warn",
+                                                        "details":  "Reported fields match CSVs, but range_bin_unique_distance is mask-inconsistent and has PFA/FA increase."
+                                                    },
+                   "claim_scope":  {
+                                       "status":  "warn",
+                                       "details":  "D5B-D5C is proxy/smoke-only; prior D5 robustness remains weak."
+                                   },
+                   "eval_type":  "synthetic_proxy_and_self_supervised_proxy_smoke"
+               },
+    "claims":  [
+                   {
+                       "claim":  "D5B-D5C result-file integrity",
+                       "id":  "C1",
+                       "impact":  "supported"
+                   },
+                   {
+                       "claim":  "range-only weak weighting improvement",
+                       "id":  "C2",
+                       "impact":  "weak_diagnostic_evidence_only"
+                   },
+                   {
+                       "claim":  "repaired weak definitions improve weak weighting",
+                       "id":  "C3",
+                       "impact":  "unsupported"
+                   },
+                   {
+                       "claim":  "RD/RA follow-up",
+                       "id":  "C4",
+                       "impact":  "smoke_feasibility_only"
+                   },
+                   {
+                       "claim":  "D6 readiness",
+                       "id":  "C5",
+                       "impact":  "unsupported_no_go"
+                   }
+               ],
+    "trace_path":  "G:\\mineru_output\\.aris\\traces\\experiment-audit\\2026-06-27_run01"
+}

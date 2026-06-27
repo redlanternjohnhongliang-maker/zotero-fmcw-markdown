@@ -1,0 +1,10 @@
+{
+  "d3_pass": false,
+  "result_dir": "G:\\mineru_output\\results\\d3_gao77_baseline_sanity",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d3_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D3_GAO77_BASELINE_SANITY_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D3_GAO77_BASELINE_SANITY_REPORT_20260626_214001.md",
+  "device": "cuda",
+  "train_samples": 600,
+  "val_samples": 320
+}

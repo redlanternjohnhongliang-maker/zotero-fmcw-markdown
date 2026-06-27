@@ -1,0 +1,66 @@
+{
+  "data_source": "synthetic_toy_rd",
+  "real_numeric_radar_data_found": false,
+  "note": "No local numeric radar tensor dataset was found under G:/mineru_output; D1 validates the metric pipeline on synthetic RD maps.",
+  "shape_clean": [
+    48,
+    64,
+    128
+  ],
+  "shape_interfered": [
+    48,
+    64,
+    128
+  ],
+  "dtype": "float32",
+  "num_targets_total": 160,
+  "target_strength_counts_generator": {
+    "weak": 51,
+    "strong": 60,
+    "mid": 49
+  },
+  "target_mask_cells": 1440,
+  "background_mask_cells": 380371,
+  "fixed_pfa_metrics_no_mitigation": [
+    {
+      "target_pfa": 0.01,
+      "threshold": 4.70447472572327,
+      "observed_test_far": 0.010119038217532997,
+      "weak_pd": 0.6785714285714286,
+      "weak_miss_rate": 0.3214285714285714,
+      "weak_n": 28,
+      "mid_pd": 0.9629629629629629,
+      "mid_miss_rate": 0.03703703703703709,
+      "mid_n": 27,
+      "strong_pd": 1.0,
+      "strong_miss_rate": 0.0,
+      "strong_n": 28,
+      "cell_precision": 0.2041407867494824,
+      "cell_recall": 0.6599732262382865,
+      "cell_f1": 0.3118279569892473,
+      "tp_cells": 493,
+      "fp_cells": 1922,
+      "fn_cells": 254
+    },
+    {
+      "target_pfa": 0.001,
+      "threshold": 7.290393920898369,
+      "observed_test_far": 0.0009634672184227567,
+      "weak_pd": 0.32142857142857145,
+      "weak_miss_rate": 0.6785714285714286,
+      "weak_n": 28,
+      "mid_pd": 0.7777777777777778,
+      "mid_miss_rate": 0.2222222222222222,
+      "mid_n": 27,
+      "strong_pd": 0.9642857142857143,
+      "strong_miss_rate": 0.0357142857142857,
+      "strong_n": 28,
+      "cell_precision": 0.6534090909090909,
+      "cell_recall": 0.46184738955823296,
+      "cell_f1": 0.5411764705882354,
+      "tp_cells": 345,
+      "fp_cells": 183,
+      "fn_cells": 402
+    }
+  ]
+}

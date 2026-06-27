@@ -1,0 +1,10 @@
+{
+  "recommend_d6": false,
+  "primary_weak_hit_delta": 1,
+  "seed_mean_weak_pd_gain": -0.00763358778625961,
+  "gain_greater_than_both_std": false,
+  "result_dir": "G:\\mineru_output\\results\\d5_check_improvement_significance",
+  "figure_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\reports\\d5_check_figures",
+  "report": "G:\\mineru_output\\refine-logs\\D5_CHECK_IMPROVEMENT_SIGNIFICANCE_REPORT.md",
+  "timestamped_report": "G:\\mineru_output\\refine-logs\\D5_CHECK_IMPROVEMENT_SIGNIFICANCE_REPORT_20260627_124618.md"
+}

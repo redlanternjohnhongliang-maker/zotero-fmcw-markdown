@@ -1,0 +1,46 @@
+{
+  "subset_dir": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1",
+  "manifest_path": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1\\manifest\\selected_frames_manifest.csv",
+  "label_policy_path": "G:\\mineru_output\\gao_77ghz_raw_adc\\subset_d1a_v1\\manifest\\label_policy.json",
+  "class1_audit_path": "G:\\mineru_output\\refine-logs\\D0B_CLASS1_SEMANTICS_CHECK.md",
+  "label_map": {
+    "0": "person",
+    "1": "cyclist_alias_or_bicycle",
+    "2": "car",
+    "3": "motorbike",
+    "5": "bus",
+    "7": "truck",
+    "80": "cyclist"
+  },
+  "class_group": {
+    "0": "pedestrian_like",
+    "1": "cyclist_like",
+    "2": "vehicle_like",
+    "3": "motorbike_like",
+    "5": "vehicle_like",
+    "7": "vehicle_like",
+    "80": "cyclist_like"
+  },
+  "objectness_target_classes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7,
+    80
+  ],
+  "adc_shape_counter": {
+    "128x255x4x2": 1500
+  },
+  "n_frames": 1500,
+  "n_targets": 6168,
+  "strict_limits": {
+    "no_training": true,
+    "no_d2_d14": true,
+    "no_synthetic_interference": true,
+    "no_mitigation_model": true,
+    "no_aenn_fcn": true,
+    "no_rdlr_diffirm_rimformer": true
+  }
+}
