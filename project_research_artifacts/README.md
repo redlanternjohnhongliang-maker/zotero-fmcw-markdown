@@ -7,7 +7,7 @@
 | 路径 | 内容 |
 | --- | --- |
 | `research_overview/` | 研究日志、idea/refine 记录、风险审稿和阶段性总结。 |
-| `results/` | D5 系列诊断和 D5H-Exec 的 CSV、JSON、Markdown 结果。 |
+| `results/` | D5 系列诊断、D5H-Exec 和 D5I protocol/data pivot 的 CSV、JSON、Markdown 结果。 |
 | `experiment_scripts/` | 当前 `G:\mineru_output\experiments` 下的实验脚本快照。 |
 | `figures/reports/` | Gao77 相关报告图、诊断图和 D5H sanity figures。 |
 | `audit_traces/` | `experiment-audit` 与 `result-to-claim` 的审计 trace 快照。 |
@@ -18,8 +18,11 @@
 2. `results/d5h_representation_protocol_audit_executed/D5H_EXECUTED_DECISION.md`
 3. `results/d5h_representation_protocol_audit_executed/EXPERIMENT_AUDIT.md`
 4. `results/d5h_representation_protocol_audit_executed/RESULT_TO_CLAIM.md`
-5. `research_overview/EXPERIMENT_LOG.md`
-6. `experiment_scripts/d5h_representation_protocol_audit_executed.py`
+5. `results/d5i_protocol_data_pivot_decision/D5I_NEXT_STEP_DECISION.md`
+6. `results/d5i_protocol_data_pivot_decision/D5I_ROUTE_COMPARISON.md`
+7. `results/d5i_protocol_data_pivot_decision/D5I_DATASET_FEASIBILITY_TABLE.csv`
+8. `research_overview/EXPERIMENT_LOG.md`
+9. `experiment_scripts/d5h_representation_protocol_audit_executed.py`
 
 ## D5H-Exec 摘要
 
@@ -51,12 +54,14 @@ D5H-Exec 只做 no-training/minimal-computation audit，没有训练模型，没
 
 ## 下一步方向
 
-当前最合理的 pivot 是先解决 label/protocol，而不是换大模型。候选方向包括：
+当前最合理的 pivot 是先解决 label/protocol，而不是换大模型。D5I 已将路线排序收紧为：
 
-- 寻找或构造具备 true Doppler、RAD boxes、track IDs、calibrated azimuth 的评估协议。
-- 把 synthetic protocol 明确写成 protocol sanity，不冒充真实物理干扰性能。
-- 重审 fixed-PFA 与 weak-target definition，避免 baseline saturation 和 proxy leakage。
-- 从论文库中重点检索弱目标保持、任务保持、真实标注、雷达干扰评估协议相关工作。
+1. 先做外部数据集 feasibility：RADIal、RADDet、CARRADA 是主要候选，但当前不下载、不训练。
+2. 再做 controlled synthetic RAD protocol sanity：作为 D5J 最小可执行 unit test，只验证 fixed-PFA weak-target metric chain。
+3. 同时维护 negative-result / limitation report：把 D5H no-pass、proxy label 风险和 stop/go 条件写清楚。
+4. Gao77 RA calibration 只保留为 diagnostic appendix，不作为主结果路线。
+
+仍然禁止 D6、weak weighting、false alarm penalty、detector/fixed-PFA 主协议修改和 confirmed RD/RA/RAD performance claim。
 
 ## 边界
 
